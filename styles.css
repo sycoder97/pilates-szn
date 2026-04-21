@@ -378,6 +378,7 @@ section { padding: clamp(48px, 7vw, 80px) 0; }
 }
 .card-pricing dt { color: var(--ink-muted); font-weight: 500; }
 .card-pricing dd { margin: 0; color: var(--ink); }
+.card-pricing dd.muted { color: var(--ink-soft); font-size: 12px; line-height: 1.4; }
 
 .card-foot {
   display: flex;

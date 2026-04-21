@@ -112,7 +112,7 @@
         ${s.review ? `<p class="card-review">"${esc(s.review)}"</p>` : ''}
         <dl class="card-pricing">
           ${s.intro ? `<dt>Intro</dt><dd>${esc(s.intro)}</dd>` : ''}
-          ${s.packages ? `<dt>Packages</dt><dd>${esc(s.packages)}</dd>` : ''}
+          ${s.minPrice ? `<dt>From</dt><dd>£${Math.round(s.minPrice)}/class</dd>` : (s.packages ? `<dt>From</dt><dd class="muted">${esc(s.packages)}</dd>` : '')}
         </dl>
         <div class="card-foot">
           <span class="verified">Verified ${esc(s.lastVerified || '—')}</span>
