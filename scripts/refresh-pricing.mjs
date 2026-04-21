@@ -49,6 +49,15 @@ const model = genAI.getGenerativeModel({
   },
 });
 
+// Separate model used only for URL healing (needs web search grounding,
+// which flash-lite doesn't support). Only used when a studio's saved URL
+// fails, so the quota impact is tiny.
+const searchModel = genAI.getGenerativeModel({
+  model: process.env.GEMINI_SEARCH_MODEL || 'gemini-2.0-flash',
+  tools: [{ googleSearch: {} }],
+  generationConfig: { temperature: 0.1 },
+});
+
 const UA =
   'Mozilla/5.0 (compatible; PilatesSznBot/1.0; +https://pilateszn.netlify.app/; directory pricing refresh once per week)';
 
@@ -96,7 +105,18 @@ async function main() {
     const studio = targets[i];
     console.log(`\n[${i + 1}/${targets.length}] ${studio.name}  ${studio.website}`);
     try {
-      const html = await fetchHTML(studio.website);
+      let html = await fetchHTML(studio.website);
+      // Self-heal broken URLs: if the fetch failed, ask Gemini with search
+      // to find the real URL, update studios.json, retry.
+      if (!html) {
+        console.log(`   URL broken — searching for correct one`);
+        const fixed = await findCorrectURL(studio);
+        if (fixed && fixed !== studio.website) {
+          console.log(`   → ${fixed}`);
+          studio.website = fixed;
+          html = await fetchHTML(fixed);
+        }
+      }
       if (!html) {
         log.push({ studio: studio.name, status: 'fetch-failed' });
         continue;
@@ -185,6 +205,34 @@ function trimHTML(html) {
   const MAX = 180_000;
   if (s.length > MAX) s = s.slice(0, MAX);
   return s;
+}
+
+// Ask Gemini (with Google search grounding) to find the real URL for a
+// studio whose saved URL is broken. Returns a URL string or null.
+async function findCorrectURL(studio) {
+  const prompt = `I'm looking for the OFFICIAL current website of a London pilates studio. The one I had stopped working.
+
+Studio name: "${studio.name}"
+Neighbourhood: ${studio.areas}
+Old URL (broken): ${studio.website}
+
+Use Google Search to find the real current website. Requirements:
+- Must be the studio's OWN official site (not a directory listing, not ClassPass, not MoveGB, not Instagram)
+- Must be for this exact studio in London (not a same-named studio elsewhere)
+- Must resolve to a working site
+
+Respond with ONLY the URL, nothing else. If you cannot find it with confidence, respond with "NONE".`;
+  try {
+    const res = await searchModel.generateContent(prompt);
+    const text = res.response.text().trim();
+    if (text === 'NONE' || !text.startsWith('http')) return null;
+    // Strip any markdown or quotes
+    const url = text.replace(/[`"'\s]/g, '').split(/\s/)[0];
+    return url;
+  } catch (err) {
+    console.error(`   search error: ${err.message}`);
+    return null;
+  }
 }
 
 async function extract(html, studio) {

@@ -143,6 +143,7 @@
         <a class="btn btn-primary" href="${outboundURL(s)}" target="_blank" rel="noopener sponsored">Book at ${esc(s.name)} →</a>
         <a class="btn btn-ghost" href="${esc(s.website)}" target="_blank" rel="noopener">Visit website</a>
       </div>
+      <p class="report-row"><a href="${reportMailto(s)}" class="report-link">Something wrong with this listing? Report it →</a></p>
     `;
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -195,6 +196,23 @@
       render();
     });
   });
+
+  // --- report-error link (mailto with prefilled subject + body) ---
+  function reportMailto(s) {
+    const cfg = window.PILATES_CONFIG || {};
+    const email = cfg.contact || 'hi@pilateszn.com';
+    const subject = `Listing correction: ${s.name}`;
+    const body = [
+      `Studio: ${s.name}`,
+      `Current URL: ${s.website}`,
+      `Areas: ${s.areas}`,
+      `Last verified: ${s.lastVerified || '—'}`,
+      '',
+      'What needs fixing?',
+      '',
+    ].join('\n');
+    return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
 
   // --- outbound link construction ---
   function outboundURL(s) {

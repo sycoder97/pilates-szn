@@ -18,6 +18,7 @@ window.PILATES_CONFIG = {
     utm_campaign: 'studio-card',
   },
 
-  // Contact email shown in About + emitted as X-Bot-Contact in scraper
-  contact: 'hi@pilateszn.com',
+  // Contact email — used for the "Report incorrect listing" link and the
+  // About-page email. Change to a custom domain address once you have one.
+  contact: 'sieyin1997@gmail.com',
 };
