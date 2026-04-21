@@ -1,0 +1,41 @@
+name: Discover new studios
+
+on:
+  schedule:
+    # 1st of every month, 09:00 UTC
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm install --no-package-lock
+
+      - name: Run discovery
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/discover-new-studios.mjs
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "discover: candidate new studios"
+          branch: discover-candidates
+          delete-branch: true
+          title: "🆕 New studio candidates for review"
+          body-path: discovery-report.md
+          labels: discovery
+          add-paths: |
+            studios.json

@@ -926,6 +926,22 @@
       "rating": 4.4,
       "website": "https://www.restartpilateslondon.co.uk",
       "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Chapel Studio Pilates",
+      "zone": "N",
+      "areas": "Angel",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.5339,
+      "lng": -0.1059,
+      "intro": "5 classes for £45 (2 weeks)",
+      "packages": "1 month unlimited intro £130 · 5/mo £81 · 10/mo £117 (member pricing)",
+      "review": "Alignment-focused reformer in Angel. Disciplined technique, strict 12-hr cancellation.",
+      "rating": null,
+      "website": "https://www.chapelstudiopilates.co.uk",
+      "lastVerified": "2026-04-21"
     }
   ],
   "generatedAt": "2026-04-21"
