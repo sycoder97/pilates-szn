@@ -65,6 +65,7 @@ const EXTRACTION_PROMPT = `You are extracting pricing information from a London 
 
 Return a JSON object with exactly these fields:
 {
+  "wrong_studio": boolean,            // TRUE if this page is clearly NOT for the named studio (e.g. different business, parked domain, holding page).
   "intro_offer": string | null,       // New-customer intro offer, e.g. "3 for £45". Null if none advertised.
   "drop_in": string | null,           // Single group class price with currency, e.g. "£30" or "£22–£28". Null if unclear.
   "packages": string | null,          // Main class-pack and membership pricing summary in one line, e.g. "5 for £140 · 10 for £250 · Unlimited £220/mo". Null if not found.
@@ -73,6 +74,7 @@ Return a JSON object with exactly these fields:
 }
 
 CRITICAL RULES:
+- FIRST check whether this page is actually for the named studio. If the page doesn't mention the studio name anywhere (in title, header, logo alt text, about section), set wrong_studio: true and leave all price fields null.
 - Only use prices that appear in the HTML. Do not invent or estimate.
 - Focus on GROUP REFORMER or GROUP MAT pilates class pricing (the main offering). Ignore private sessions unless that's all they do.
 - If pricing is hidden behind a login/booking widget (Mindbody, Momence, ClassPass widgets with no inline prices), set all price fields to null and note this.
@@ -121,11 +123,26 @@ async function main() {
         log.push({ studio: studio.name, status: 'fetch-failed' });
         continue;
       }
-      const trimmed = trimHTML(html);
-      const extracted = await extract(trimmed, studio);
+      let trimmed = trimHTML(html);
+      let extracted = await extract(trimmed, studio);
       if (!extracted) {
         log.push({ studio: studio.name, status: 'extract-failed' });
         continue;
+      }
+      // If the URL loads but serves the wrong studio (common when a domain
+      // changed hands), search for the correct one and retry.
+      if (extracted.wrong_studio) {
+        console.log(`   URL serves wrong business — searching`);
+        const fixed = await findCorrectURL(studio);
+        if (fixed && fixed !== studio.website) {
+          console.log(`   → ${fixed}`);
+          studio.website = fixed;
+          const newHtml = await fetchHTML(fixed);
+          if (newHtml) {
+            trimmed = trimHTML(newHtml);
+            extracted = await extract(trimmed, studio);
+          }
+        }
       }
       const before = { intro: studio.intro, packages: studio.packages };
       const changed = applyExtraction(studio, extracted, today);
