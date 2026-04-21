@@ -30,7 +30,9 @@ const DRY = args['dry-run'] === true;
 const ONLY = args.only || null;
 const STALE_DAYS = args['stale-days'] ? parseInt(args['stale-days']) : null;
 
-const MODEL_NAME = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+// flash-lite has ~10× the free-tier daily quota of full flash. The task
+// (extracting visible prices from HTML) doesn't need full Flash's reasoning.
+const MODEL_NAME = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 if (!GEMINI_API_KEY) {

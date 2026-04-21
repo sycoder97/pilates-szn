@@ -26,19 +26,22 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const MODEL_NAME = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+// Discovery needs full Flash because it uses grounded search (not available
+// on flash-lite). Discovery only runs monthly with ~5 calls, so the 200/day
+// free-tier limit is plenty.
+const SEARCH_MODEL = process.env.GEMINI_SEARCH_MODEL || 'gemini-2.0-flash';
+const JSON_MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite';
+
 const genAI = new GoogleGenerativeAI(API_KEY);
 
-// Grounded search model (for discovery)
 const searchModel = genAI.getGenerativeModel({
-  model: MODEL_NAME,
+  model: SEARCH_MODEL,
   tools: [{ googleSearch: {} }],
   generationConfig: { temperature: 0.3 },
 });
 
-// Structured model (for pricing extraction once we have a URL)
 const jsonModel = genAI.getGenerativeModel({
-  model: MODEL_NAME,
+  model: JSON_MODEL,
   generationConfig: { responseMimeType: 'application/json', temperature: 0.1 },
 });
 
