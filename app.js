@@ -33,20 +33,27 @@
     });
 
   // --- price parsing ---
-  // Extract the lowest £ figure we can find across intro + packages fields.
-  // Falls back to null if nothing usable.
+  // Parse the lowest ongoing per-class price from the packages field.
+  // Intentionally ignores `intro` — intro offers are one-off new-client
+  // discounts, not what a member actually pays long-term.
   function extractMinPrice(studio) {
-    const text = `${studio.packages || ''} ${studio.intro || ''}`;
+    const text = studio.packages || '';
+    if (!text) return null;
     const nums = [];
-    const re = /£\s?(\d+(?:\.\d+)?)/g;
+    // Normalise "N for £X" or "N/£X" style pack pricing to per-class rate.
+    const packRe = /(\d+)\s*(?:for|\/|·|x|\s)\s*£\s?(\d+(?:\.\d+)?)/gi;
     let m;
-    while ((m = re.exec(text)) !== null) nums.push(parseFloat(m[1]));
-    // Also parse "3 for £45" → £15/class style normalisation
-    const packRe = /(\d+)\s*(?:for|\/|·)\s*£\s?(\d+(?:\.\d+)?)/gi;
     while ((m = packRe.exec(text)) !== null) {
       const pack = parseInt(m[1]);
       const total = parseFloat(m[2]);
-      if (pack > 1 && pack <= 20) nums.push(total / pack);
+      if (pack >= 2 && pack <= 25) nums.push(total / pack);
+    }
+    // Grab bare £-per-class figures (e.g. "Single £30", "Drop-in £22–£28").
+    // We only trust figures under £100 as per-class; larger numbers are packs.
+    const bareRe = /£\s?(\d+(?:\.\d+)?)/g;
+    while ((m = bareRe.exec(text)) !== null) {
+      const n = parseFloat(m[1]);
+      if (n > 0 && n < 100) nums.push(n);
     }
     if (!nums.length) return null;
     return Math.min(...nums);
