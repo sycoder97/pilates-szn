@@ -1,20 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pilates szn — London's Studio Finder</title>
-    <meta name="description" content="Compare every London pilates, lagree & barre studio — intro offers, package prices, and reviews in one place." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: 'Outfit', sans-serif; background: #FFF9F8; }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>pilates szn — London's honest pilates directory</title>
+<meta name="description" content="Verified pricing, honest reviews and real locations for every London pilates studio worth visiting. Reformer, Lagree, Mat, Classical." />
+<meta property="og:title" content="pilates szn — London's honest pilates directory" />
+<meta property="og:description" content="Find your next London pilates studio — verified pricing, real reviews, no fluff." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#faf7f2" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%98%E2%80%8D%E2%99%80%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">pilates</span><span class="brand-accent">szn</span>
+    </a>
+    <nav class="nav">
+      <a href="#directory">Directory</a>
+      <a href="#guides">Guides</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">London · 2026</p>
+    <h1>Find your next pilates studio.</h1>
+    <p class="lede">An honest directory of every pilates studio in London worth your money. Verified pricing, real reviews, filtered by what actually matters — location, method, price, vibe.</p>
+    <div class="hero-cta">
+      <a href="#directory" class="btn btn-primary">Browse studios</a>
+      <a href="#guides" class="btn btn-ghost">Read the guides</a>
+    </div>
+    <p class="hero-meta"><span id="studio-count">—</span> studios · Last verified <span id="last-verified">—</span></p>
+  </div>
+</section>
+
+<section id="guides" class="guides">
+  <div class="wrap">
+    <h2 class="section-title">Start here</h2>
+    <div class="guide-grid">
+      <a href="#directory" data-filter="type:Reformer" class="guide-card">
+        <span class="guide-tag">Guide</span>
+        <h3>Best reformer studios in London</h3>
+        <p>The boutique reformer scene, ranked by value, instruction quality, and vibe.</p>
+      </a>
+      <a href="#directory" data-filter="price:under20" class="guide-card">
+        <span class="guide-tag">Budget</span>
+        <h3>Reformer for under £20 a class</h3>
+        <p>Yes, it exists — even in Zone 1. Where to find honest value in 2026.</p>
+      </a>
+      <a href="#directory" data-filter="type:Lagree" class="guide-card">
+        <span class="guide-tag">Intense</span>
+        <h3>Where to do Lagree in London</h3>
+        <p>The Megaformer method, licensed instructors, and what makes each studio different.</p>
+      </a>
+      <a href="#directory" data-filter="intro:true" class="guide-card">
+        <span class="guide-tag">Try it</span>
+        <h3>Best intro offers this month</h3>
+        <p>New-client deals across the city — the cheapest way to sample the best studios.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="directory" class="directory">
+  <div class="wrap">
+    <div class="directory-header">
+      <h2 class="section-title">The directory</h2>
+      <p class="section-sub">Filter, search, and compare every studio on our books.</p>
+    </div>
+
+    <div class="filters">
+      <div class="filter-row">
+        <input type="search" id="search" placeholder="Search by name or neighbourhood…" aria-label="Search studios" />
+      </div>
+      <div class="filter-row filter-chips" role="toolbar" aria-label="Filter studios">
+        <div class="chip-group" data-group="zone">
+          <span class="chip-label">Zone</span>
+          <button class="chip active" data-value="">All</button>
+          <button class="chip" data-value="C">Central</button>
+          <button class="chip" data-value="N">North</button>
+          <button class="chip" data-value="E">East</button>
+          <button class="chip" data-value="S">South</button>
+          <button class="chip" data-value="W">West</button>
+        </div>
+        <div class="chip-group" data-group="type">
+          <span class="chip-label">Method</span>
+          <button class="chip active" data-value="">All</button>
+          <button class="chip" data-value="Reformer">Reformer</button>
+          <button class="chip" data-value="Mat">Mat</button>
+          <button class="chip" data-value="Lagree">Lagree</button>
+          <button class="chip" data-value="Barre">Barre</button>
+          <button class="chip" data-value="Hot">Hot</button>
+        </div>
+        <div class="chip-group" data-group="price">
+          <span class="chip-label">Price</span>
+          <button class="chip active" data-value="">All</button>
+          <button class="chip" data-value="under20">Under £20</button>
+          <button class="chip" data-value="mid">£20–£30</button>
+          <button class="chip" data-value="premium">£30+</button>
+        </div>
+      </div>
+      <div class="filter-row filter-meta">
+        <span id="result-count" class="result-count">—</span>
+        <button id="clear-filters" class="text-btn" type="button">Clear filters</button>
+      </div>
+    </div>
+
+    <div id="studio-grid" class="studio-grid" aria-live="polite"></div>
+    <p id="empty-state" class="empty-state" hidden>No studios match these filters. <button class="text-btn" id="empty-clear" type="button">Clear filters</button></p>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap about-inner">
+    <h2 class="section-title">About pilates szn</h2>
+    <p>Pilates pricing in London is a mess. Studios hide it behind booking widgets, intro offers expire without warning, and half the blogs ranking on Google list studios that closed two years ago.</p>
+    <p>We keep a single source of truth — verified quarterly — and publish it here for free. If a studio's details look wrong, <a href="mailto:hi@pilateszn.com">tell us</a> and we'll fix it.</p>
+    <p class="fine-print">Some links on this site are affiliate links — if you book through us, we may earn a small commission at no extra cost to you. It never influences our reviews or rankings.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> pilates szn · London</p>
+    <p><a href="mailto:hi@pilateszn.com">Contact</a> · <a href="#about">About</a></p>
+  </div>
+</footer>
+
+<!-- Studio detail modal -->
+<div class="modal" id="studio-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <article class="modal-panel" role="document">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-body" id="modal-body"></div>
+  </article>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
 </html>

@@ -1,0 +1,18 @@
+[build]
+  publish = "."
+  command = ""
+  # This is a plain static site — no build step. `command = ""` stops Netlify
+  # from running `npm run build` just because package.json exists (that file is
+  # only there for the pricing-refresh script that runs in GitHub Actions).
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/studios.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

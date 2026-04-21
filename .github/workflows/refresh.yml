@@ -1,0 +1,52 @@
+name: Refresh pricing
+
+on:
+  schedule:
+    # Every Monday at 08:00 UTC
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    # Manual trigger from the GitHub UI
+    inputs:
+      only:
+        description: 'Refresh a single studio (partial name match, optional)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm install
+
+      - name: Run refresh
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.only }}" ]; then
+            node scripts/refresh-pricing.mjs --only "${{ github.event.inputs.only }}"
+          else
+            node scripts/refresh-pricing.mjs
+          fi
+
+      - name: Commit changes
+        run: |
+          git config user.name "pilates-szn-bot"
+          git config user.email "bot@pilateszn.com"
+          if ! git diff --quiet studios.json; then
+            git add studios.json refresh.log
+            git commit -m "chore: refresh pricing $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No pricing changes."
+          fi

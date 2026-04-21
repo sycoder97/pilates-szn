@@ -1,0 +1,4 @@
+{
+  "_notes": "Manual overrides. Any field set here wins over the scraper's extraction. Keyed by studio name (exact match with studios.json). Use this when the scraper got it wrong, or for fields you want to pin permanently (affiliate_url, custom review, etc).",
+  "studios": {}
+}

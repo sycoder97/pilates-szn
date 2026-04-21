@@ -1,0 +1,932 @@
+{
+  "studios": [
+    {
+      "name": "Heartcore",
+      "zone": "W",
+      "areas": "Chelsea, Notting Hill, Battersea +5",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.487,
+      "lng": -0.169,
+      "intro": "3 for £45",
+      "packages": "5 for £140 · 10 for £250",
+      "review": "Spa-like studios. Calm, structured delivery.",
+      "rating": 4.8,
+      "website": "https://weareheartcore.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Ten Health & Fitness",
+      "zone": "C",
+      "areas": "10 locations incl. Mayfair, City",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.511,
+      "lng": -0.135,
+      "intro": "3 for £57",
+      "packages": "Single £38 · Membership from £345/mo",
+      "review": "Small classes of ten. PT-style coaching.",
+      "rating": 4.7,
+      "website": "https://ten.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "FRAME",
+      "zone": "C",
+      "areas": "King's Cross, Shoreditch, Angel, Victoria",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.535,
+      "lng": -0.125,
+      "intro": "3 for £40",
+      "packages": "Drop-in £16–£23 · 6/mo £72 · Unltd £125/mo",
+      "review": "Affordable, fun, huge variety of classes.",
+      "rating": 4.6,
+      "website": "https://moveyourframe.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "1Rebel",
+      "zone": "C",
+      "areas": "13 locations across London",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.52,
+      "lng": -0.089,
+      "intro": "3 for £45",
+      "packages": "From £38/mo membership",
+      "review": "High-energy music-fuelled reformer.",
+      "rating": 4.5,
+      "website": "https://www.1rebel.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "LevelOut",
+      "zone": "S",
+      "areas": "Brixton, Peckham, Camberwell +7",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.461,
+      "lng": -0.115,
+      "intro": "1 free + 3 for £30",
+      "packages": "5 for £112.50 · Drop-in £25",
+      "review": "Community south London. Routines change daily.",
+      "rating": 4.5,
+      "website": "https://www.levelout.london",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Tempo 301",
+      "zone": "E",
+      "areas": "Hackney, Shoreditch, Elephant & Castle",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.529,
+      "lng": -0.055,
+      "intro": "3 for £48",
+      "packages": "Single £30 · 5 for £130 · 10 for £210",
+      "review": "Music-driven reformer. East London favourite.",
+      "rating": 4.6,
+      "website": "https://tempo301.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Psycle",
+      "zone": "C",
+      "areas": "Oxford Circus, Victoria, Bank",
+      "types": [
+        "Reformer",
+        "Hot"
+      ],
+      "lat": 51.515,
+      "lng": -0.142,
+      "intro": "3 for £50",
+      "packages": "Single class £26 · Packs cheaper",
+      "review": "Intense inferno pilates alongside reformer.",
+      "rating": 4.5,
+      "website": "https://psyclelondon.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Reformcore",
+      "zone": "C",
+      "areas": "Shoreditch, Chelsea, Islington, Mayfair",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.525,
+      "lng": -0.079,
+      "intro": "3 for £50",
+      "packages": "CommonBond membership",
+      "review": "Barre-inspired isometric reformer + dumbbells.",
+      "rating": 4.6,
+      "website": "https://reformcore.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "KARVE Club",
+      "zone": "W",
+      "areas": "Kensington, Chelsea, Notting Hill",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.499,
+      "lng": -0.188,
+      "intro": "2 for £50",
+      "packages": "4 classes £135/mo · Unlimited £400/mo",
+      "review": "NY-inspired Transformer Pilates. Intense.",
+      "rating": 4.6,
+      "website": "https://karve.club",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "triyoga",
+      "zone": "C",
+      "areas": "Shoreditch, Camden, Chelsea, Ealing",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.527,
+      "lng": -0.078,
+      "intro": "3 for £49",
+      "packages": "Credit packs ~£20/class",
+      "review": "London's leading yoga & pilates institution.",
+      "rating": 4.7,
+      "website": "https://triyoga.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Nobu Pilates",
+      "zone": "W",
+      "areas": "Marylebone",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.515,
+      "lng": -0.156,
+      "intro": "Taster from £35",
+      "packages": "Membership from ~£200/mo",
+      "review": "Five-star hotel. Reformers, cadillac, barrels.",
+      "rating": 4.7,
+      "website": "https://london.nobuhotels.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Bodyism",
+      "zone": "W",
+      "areas": "Westbourne Grove",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.516,
+      "lng": -0.195,
+      "intro": "Trial day from £50",
+      "packages": "Members-only from £500/mo",
+      "review": "Only 4 reformer beds. Intimate. Famous pancakes.",
+      "rating": 4.8,
+      "website": "https://bodyism.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Core Flex Pilates",
+      "zone": "W",
+      "areas": "Chelsea",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.492,
+      "lng": -0.175,
+      "intro": "3 for £75",
+      "packages": "5 for £175 · 10 for £300",
+      "review": "Individual coaching. Calm studio, intense classes.",
+      "rating": 4.6,
+      "website": "https://coreflexpilates.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Avalon Pilates",
+      "zone": "S",
+      "areas": "Clapham, Earlsfield",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.462,
+      "lng": -0.152,
+      "intro": "4 for £61",
+      "packages": "Class packs from ~£22/class",
+      "review": "Sydney-inspired. 13 beds. Rare Tower Pilates.",
+      "rating": 4.6,
+      "website": "https://avalonpilates.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Studio Anatomy",
+      "zone": "E",
+      "areas": "London Fields, Islington",
+      "types": [
+        "Reformer",
+        "Hot"
+      ],
+      "lat": 51.542,
+      "lng": -0.061,
+      "intro": "1 free + 3 for £55",
+      "packages": "Class packs from ~£25/class",
+      "review": "Reformer, hot mat, strength & infrared sauna.",
+      "rating": 4.5,
+      "website": "https://studioanatomy.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Blok",
+      "zone": "E",
+      "areas": "Clapton, Shoreditch",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.552,
+      "lng": -0.056,
+      "intro": "10 for £75 (first month)",
+      "packages": "£21–£23 single · Packs cheaper",
+      "review": "Converted warehouses. Dynamic classes, great music.",
+      "rating": 4.5,
+      "website": "https://bloklondon.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Blanc Space",
+      "zone": "W",
+      "areas": "Fulham",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.474,
+      "lng": -0.203,
+      "intro": "3 for £55",
+      "packages": "5 for £70 (£14/class)",
+      "review": "Boutique with art exhibitions. Arched mirrors.",
+      "rating": 4.5,
+      "website": "https://blancspace.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "PBB Studio",
+      "zone": "W",
+      "areas": "Fulham",
+      "types": [
+        "Mat",
+        "Barre"
+      ],
+      "lat": 51.473,
+      "lng": -0.201,
+      "intro": "3 for £60",
+      "packages": "5 for £115 · £25 single",
+      "review": "Barre dynamic Pilates. Mat meets ballet.",
+      "rating": 4.5,
+      "website": "https://pbbstudio.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Bootcamp Pilates",
+      "zone": "W",
+      "areas": "Richmond",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.461,
+      "lng": -0.304,
+      "intro": "First class £25",
+      "packages": "5 for £160 · £35 single",
+      "review": "Cardio-heavy reformer. Great music.",
+      "rating": 4.4,
+      "website": "https://bootcamppilates.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Flowing Body",
+      "zone": "E",
+      "areas": "East London",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.535,
+      "lng": -0.059,
+      "intro": "3 for £49 (£34 w/ ref)",
+      "packages": "Class packs from ~£20/class",
+      "review": "Small group. Beginner to master trainer.",
+      "rating": 4.4,
+      "website": "https://flowingbodypilates.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Flow Ldn",
+      "zone": "C",
+      "areas": "Tottenham Court Road",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.517,
+      "lng": -0.131,
+      "intro": "3 for £40",
+      "packages": "Packs from ~£18/class",
+      "review": "Bright compact studio. Foundation + Dynamic classes.",
+      "rating": 4.4,
+      "website": "https://flowldn.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "East of Eden",
+      "zone": "E",
+      "areas": "Walthamstow",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.589,
+      "lng": -0.02,
+      "intro": "Community class £10",
+      "packages": "£14 single · Packs from £12/class",
+      "review": "Pre/post-natal, cafe with kombucha.",
+      "rating": 4.5,
+      "website": "https://eastofedenstudios.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "First Reform",
+      "zone": "N",
+      "areas": "Tottenham",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.59,
+      "lng": -0.072,
+      "intro": "First class £12",
+      "packages": "£24/session, pack discounts",
+      "review": "N17's first reformer. Merrithew V2 machines.",
+      "rating": 4.4,
+      "website": "https://firstreformpilates.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Pilates HQ",
+      "zone": "N",
+      "areas": "Angel, Islington",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.534,
+      "lng": -0.106,
+      "intro": "First class FREE",
+      "packages": "Peak: £25 single · 10 for £200 · Off-peak £22",
+      "review": "Roof garden, skylights. Calm haven in Angel.",
+      "rating": 4.5,
+      "website": "https://pilateshq.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Core Pilates Studios",
+      "zone": "W",
+      "areas": "Kensington, Chelsea",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.499,
+      "lng": -0.191,
+      "intro": "Intro class from £35",
+      "packages": "Group & private from £40",
+      "review": "STOTT PILATES certified. Merrithew equipment.",
+      "rating": 4.7,
+      "website": "https://corepilatesstudios.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Club Pilates",
+      "zone": "S",
+      "areas": "Bankside, Fulham",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.507,
+      "lng": -0.096,
+      "intro": "Free intro class",
+      "packages": "Various memberships from £99/mo",
+      "review": "World's biggest brand. 935+ studios. 4 levels.",
+      "rating": 4.4,
+      "website": "https://www.clubpilates.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "FÔLD Reformer",
+      "zone": "W",
+      "areas": "North Kensington",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.522,
+      "lng": -0.219,
+      "intro": "From £10/class",
+      "packages": "Pay as you go from £10",
+      "review": "London's most accessible reformer price.",
+      "rating": 4.3,
+      "website": "https://foldreformer.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Reformer Collective",
+      "zone": "S",
+      "areas": "Balham, Earlsfield, Piccadilly",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.444,
+      "lng": -0.153,
+      "intro": "3 for £55",
+      "packages": "Packs from ~£22/class",
+      "review": "Brighton-born. Sleek aesthetic, natural light.",
+      "rating": 4.5,
+      "website": "https://reformercollective.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Casa Core",
+      "zone": "S",
+      "areas": "East Dulwich",
+      "types": [
+        "Reformer",
+        "Barre"
+      ],
+      "lat": 51.462,
+      "lng": -0.071,
+      "intro": "Intro 3-pack £55",
+      "packages": "Packs from ~£25/class",
+      "review": "Lime-washed walls. Spa-like interiors.",
+      "rating": 4.6,
+      "website": "https://casacore.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Scandi Pilates",
+      "zone": "S",
+      "areas": "Clapham",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.462,
+      "lng": -0.138,
+      "intro": "3 for £50",
+      "packages": "Packs from ~£22/class",
+      "review": "Scandinavian-inspired. Great for beginners.",
+      "rating": 4.4,
+      "website": "https://scandipilates.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "FS8",
+      "zone": "C",
+      "areas": "Fitzrovia",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.519,
+      "lng": -0.14,
+      "intro": "Trial class £20",
+      "packages": "Membership from £130/mo",
+      "review": "F45's sister. Pilates + yoga + strength.",
+      "rating": 4.3,
+      "website": "https://fs8.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Hypecore",
+      "zone": "C",
+      "areas": "City of London",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.516,
+      "lng": -0.085,
+      "intro": "1:4 group from £29",
+      "packages": "Memberships from 6 for £168",
+      "review": "Cadillac, Wunda Chair, Ladder Barrel groups.",
+      "rating": 4.5,
+      "website": "https://www.hypecorepilates.com/",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Reformer LDN",
+      "zone": "E",
+      "areas": "Shoreditch",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.533,
+      "lng": -0.065,
+      "intro": "3 for £48 (+ free socks)",
+      "packages": "Packs from ~£20/class",
+      "review": "East London's first Powerformer studio.",
+      "rating": 4.4,
+      "website": "https://reformerldn.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "LOAD",
+      "zone": "E",
+      "areas": "Old Street",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.526,
+      "lng": -0.089,
+      "intro": "Intro class £20",
+      "packages": "Packs from ~£25/class",
+      "review": "Strength-first reformer. Progressive overload.",
+      "rating": 4.5,
+      "website": "https://loadstudio.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Truform",
+      "zone": "S",
+      "areas": "Lewisham",
+      "types": [
+        "Reformer",
+        "Hot"
+      ],
+      "lat": 51.454,
+      "lng": -0.02,
+      "intro": "3 for £49",
+      "packages": "Class packs from ~£20/class",
+      "review": "Reformer Pilates & Hot Yoga in one studio.",
+      "rating": 4.5,
+      "website": "https://truformstudio.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "MAD Lagree",
+      "zone": "W",
+      "areas": "Chelsea, Mayfair",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.488,
+      "lng": -0.17,
+      "intro": "First class £30",
+      "packages": "10 for £280 · 20 for £500",
+      "review": "London's only licensed Lagree studio.",
+      "rating": 4.6,
+      "website": "https://letsgomad.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Oncore",
+      "zone": "S",
+      "areas": "Clapham",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.462,
+      "lng": -0.139,
+      "intro": "3 for £30 (core) · 3 ref £50",
+      "packages": "Memberships from £99/mo",
+      "review": "Reformer, Ride, Lagree, HIIT — all in one.",
+      "rating": 4.5,
+      "website": "https://oncorelondon.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Pilates Squared",
+      "zone": "W",
+      "areas": "South Kensington",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.496,
+      "lng": -0.177,
+      "intro": "Intro session £75",
+      "packages": "Private/semi-private. Max 3.",
+      "review": "25+ years expertise. Truly boutique.",
+      "rating": 4.7,
+      "website": "https://pilatessquared.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Kovaa Studio",
+      "zone": "N",
+      "areas": "Willesden (Women-only)",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.54,
+      "lng": -0.225,
+      "intro": "Intro pack from £30",
+      "packages": "Packs from ~£20/class",
+      "review": "Women-only. Small classes, strong community.",
+      "rating": 4.5,
+      "website": "https://kovaastudio.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Plum Pilates",
+      "zone": "S",
+      "areas": "Bromley",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.406,
+      "lng": 0.015,
+      "intro": "Intro 3-pack £45",
+      "packages": "Packs from ~£18/class",
+      "review": "Boutique reformer. Empowering & welcoming.",
+      "rating": 4.5,
+      "website": "https://plumpilates.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "House of Balance",
+      "zone": "S",
+      "areas": "South London",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.45,
+      "lng": -0.06,
+      "intro": "3 for £45",
+      "packages": "Packs from ~£20/class",
+      "review": "Full body reformer. Balances body and mind.",
+      "rating": 4.4,
+      "website": "https://houseofbalance.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Exhale Pilates",
+      "zone": "N",
+      "areas": "Primrose Hill, Marylebone, North Finchley",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.539,
+      "lng": -0.158,
+      "intro": "Tower intro £50 (1 private + 1 group)",
+      "packages": "Drop-in £40 · 10 for cheaper",
+      "review": "Award-winning classical Pilates. Every piece of apparatus under the sun.",
+      "rating": 4.7,
+      "website": "https://exhalepilateslondon.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Kinetic Pilates",
+      "zone": "N",
+      "areas": "Stroud Green, Old Street",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.565,
+      "lng": -0.108,
+      "intro": "10 group classes £150",
+      "packages": "£15/class in pack",
+      "review": "Classical Pilates with reformers, chairs, towers, guillotines. Deep commitment to technique.",
+      "rating": 4.6,
+      "website": "https://kineticpilates.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Curve Pilates",
+      "zone": "C",
+      "areas": "Borough, London Bridge",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.503,
+      "lng": -0.089,
+      "intro": "3 for £55",
+      "packages": "5 reformers per class. Packs available",
+      "review": "Hidden gem — oasis of calm above Borough High Street. Only 5 beds.",
+      "rating": 4.6,
+      "website": "https://www.curvepilates.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Reform & Vibes",
+      "zone": "C",
+      "areas": "London Bridge",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.505,
+      "lng": -0.086,
+      "intro": "3 for £50",
+      "packages": "Packs from ~£22/class",
+      "review": "Dynamic reformer near London Bridge. Good vibes + hands-on guidance.",
+      "rating": 4.4,
+      "website": "https://www.reformandvibes.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Strong & Bendy",
+      "zone": "E",
+      "areas": "Hackney",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.546,
+      "lng": -0.055,
+      "intro": "3 for £45",
+      "packages": "Juicy/Spicy/Chilled reformer from ~£22",
+      "review": "Inclusive studio celebrating every body. Beginner-friendly with fun class names.",
+      "rating": 4.5,
+      "website": "https://strongandbendy.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Respark",
+      "zone": "S",
+      "areas": "Vauxhall, Nine Elms",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.486,
+      "lng": -0.122,
+      "intro": "Intro sessions from £30",
+      "packages": "Packs from ~£25/class",
+      "review": "Boutique wellness combining spine-friendly reformer with holistic approach.",
+      "rating": 4.4,
+      "website": "https://respark.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Freedom Clinics",
+      "zone": "E",
+      "areas": "Canary Wharf",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.505,
+      "lng": -0.019,
+      "intro": "Intro class from £30",
+      "packages": "Groups of 6 · Packs available",
+      "review": "Clinical-grade reformer with physio background. Balanced Body machines + towers.",
+      "rating": 4.5,
+      "website": "https://freedomclinics.com/pilates",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Milo & The Bull",
+      "zone": "S",
+      "areas": "South London",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.458,
+      "lng": -0.07,
+      "intro": "First 2 for £25",
+      "packages": "Packs from ~£20/class",
+      "review": "Boutique studio mixing cardio and strength. Stretch area before/after class.",
+      "rating": 4.5,
+      "website": "https://miloandthebull.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Pause Studio",
+      "zone": "E",
+      "areas": "Leyton, South Woodford",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": 51.567,
+      "lng": -0.013,
+      "intro": "3 for £49",
+      "packages": "Tower + Reformer + Mat classes",
+      "review": "Three locations. Tower Pilates, yoga, barre. Growing East London community.",
+      "rating": 4.5,
+      "website": "https://www.pausestudio.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Complete Pilates",
+      "zone": "W",
+      "areas": "Chelsea",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.491,
+      "lng": -0.168,
+      "intro": "4 for £60 (4:1 group)",
+      "packages": "5 for £125 · 10 for £200",
+      "review": "Physio-led. 4:1 ratio for serious attention. Clinical precision.",
+      "rating": 4.7,
+      "website": "https://complete-pilates.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Strong Pilates",
+      "zone": "N",
+      "areas": "Islington, Warren St, Wimbledon, Wandsworth",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.536,
+      "lng": -0.104,
+      "intro": "10-day unlimited £49",
+      "packages": "5 for £95 · Memberships via app",
+      "review": "Australian import. Rowformer = pilates + rowing cardio. 800+ calories/class.",
+      "rating": 4.5,
+      "website": "https://strongpilates.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "BST Lagree",
+      "zone": "N",
+      "areas": "Angel, Islington",
+      "types": [
+        "Lagree"
+      ],
+      "lat": 51.534,
+      "lng": -0.109,
+      "intro": "3 for £59",
+      "packages": "Single £35 · Packs via Mariana Tek",
+      "review": "London's premier Lagree. All-certified instructors. Europe's most experienced trainer.",
+      "rating": 4.6,
+      "website": "https://bstlagree.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "FORM Studios",
+      "zone": "W",
+      "areas": "Queensway, Notting Hill",
+      "types": [
+        "Lagree"
+      ],
+      "lat": 51.513,
+      "lng": -0.187,
+      "intro": "Lagree 3 for £70",
+      "packages": "Single £35 · 5 for £170 · 10 for £310",
+      "review": "LA-to-London Lagree + TRX, HIIT, boxing. Two sleek locations.",
+      "rating": 4.5,
+      "website": "https://formstudios.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Barrecore",
+      "zone": "C",
+      "areas": "Notting Hill, Chelsea, Camden, Mayfair +more",
+      "types": [
+        "Barre"
+      ],
+      "lat": 51.512,
+      "lng": -0.199,
+      "intro": "CommonBond 3 for £49",
+      "packages": "Class packs · United Fitness unlimited",
+      "review": "London's biggest barre chain. Low-impact isometric method. 13 UK studios.",
+      "rating": 4.6,
+      "website": "https://barrecore.com",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Refine Pilates",
+      "zone": "C",
+      "areas": "Liverpool Street",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.517,
+      "lng": -0.077,
+      "intro": "Intro pack via Momence",
+      "packages": "7 reformers · Max 7/class · Packs available",
+      "review": "Hidden gem 180m from Liverpool St. Brand new equipment. Small intimate classes.",
+      "rating": 4.5,
+      "website": "https://www.refinepilates.co.uk",
+      "lastVerified": "2026-03-18"
+    },
+    {
+      "name": "Restart Reformer",
+      "zone": "C",
+      "areas": "Holborn",
+      "types": [
+        "Reformer"
+      ],
+      "lat": 51.517,
+      "lng": -0.112,
+      "intro": "3 for £55",
+      "packages": "Single £30 · 5 for £115 · 10 for £210",
+      "review": "UK's first multicultural studio. Stunning Victorian space. RESTARTCORE FORMER machines.",
+      "rating": 4.4,
+      "website": "https://www.restartpilateslondon.co.uk",
+      "lastVerified": "2026-03-18"
+    }
+  ],
+  "generatedAt": "2026-04-21"
+}
