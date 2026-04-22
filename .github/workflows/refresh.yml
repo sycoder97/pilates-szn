@@ -42,10 +42,14 @@ jobs:
         run: |
           git config user.name "pilates-szn-bot"
           git config user.email "bot@pilateszn.com"
+          # Always commit refresh.log for audit visibility, plus studios.json
+          # if it changed.
+          git add refresh.log
           if ! git diff --quiet studios.json; then
-            git add studios.json refresh.log
+            git add studios.json
             git commit -m "chore: refresh pricing $(date -u +%Y-%m-%d)"
-            git push
           else
-            echo "No pricing changes."
+            # Studios unchanged — still commit the log so we can see the run.
+            git commit -m "chore: refresh log $(date -u +%Y-%m-%d) (no data changes)" --allow-empty
           fi
+          git push
