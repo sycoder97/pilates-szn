@@ -32,7 +32,7 @@ const STALE_DAYS = args['stale-days'] ? parseInt(args['stale-days']) : null;
 
 // flash-lite has ~10× the free-tier daily quota of full flash. The task
 // (extracting visible prices from HTML) doesn't need full Flash's reasoning.
-const MODEL_NAME = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite';
+const MODEL_NAME = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 if (!GEMINI_API_KEY) {
@@ -53,7 +53,7 @@ const model = genAI.getGenerativeModel({
 // which flash-lite doesn't support). Only used when a studio's saved URL
 // fails, so the quota impact is tiny.
 const searchModel = genAI.getGenerativeModel({
-  model: process.env.GEMINI_SEARCH_MODEL || 'gemini-2.0-flash',
+  model: process.env.GEMINI_SEARCH_MODEL || 'gemini-2.5-flash',
   tools: [{ googleSearch: {} }],
   generationConfig: { temperature: 0.1 },
 });

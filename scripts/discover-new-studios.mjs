@@ -29,8 +29,8 @@ if (!API_KEY) {
 // Discovery needs full Flash because it uses grounded search (not available
 // on flash-lite). Discovery only runs monthly with ~5 calls, so the 200/day
 // free-tier limit is plenty.
-const SEARCH_MODEL = process.env.GEMINI_SEARCH_MODEL || 'gemini-2.0-flash';
-const JSON_MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite';
+const SEARCH_MODEL = process.env.GEMINI_SEARCH_MODEL || 'gemini-2.5-flash';
+const JSON_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
