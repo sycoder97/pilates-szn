@@ -151,6 +151,18 @@ async function main() {
           }
         }
       }
+      // Low-confidence usually means pricing is hidden in a JS-rendered
+      // booking widget (Mindbody / Momence / ClassPass). Fall back to Gemini
+      // with Google Search grounding — it can often find the pricing from
+      // ClassPass, review sites, or a pricing page we missed.
+      if (extracted && !extracted._error && (extracted.confidence ?? 0) < 0.4) {
+        console.log(`   low confidence (${extracted.confidence}) — trying search fallback`);
+        const searched = await searchPricing(studio);
+        if (searched && (searched.confidence ?? 0) >= 0.5) {
+          console.log(`   search fallback succeeded (conf ${searched.confidence})`);
+          extracted = searched;
+        }
+      }
       const before = { intro: studio.intro, packages: studio.packages };
       const changed = applyExtraction(studio, extracted, today);
       log.push({
@@ -239,6 +251,46 @@ function trimHTML(html) {
   const MAX = 180_000;
   if (s.length > MAX) s = s.slice(0, MAX);
   return s;
+}
+
+// Second-pass pricing extraction using Gemini with Google Search grounding.
+// Used when the initial HTML scrape can't find prices (usually because they
+// sit in a JS-rendered booking widget). Search-grounded models can pull
+// pricing from ClassPass, review sites, or the studio's own pricing page
+// even when it's not in the main HTML.
+async function searchPricing(studio) {
+  const prompt = `Use Google Search to find CURRENT pricing for this London pilates studio. Multiple searches may help.
+
+Studio: ${studio.name}
+Website: ${studio.website}
+Area: ${studio.areas}
+
+Look at: the studio's own site (pricing page, booking widget source), ClassPass listing, recent reviews/blogs mentioning prices, Instagram bio if it shows prices.
+
+Return ONLY a JSON object (no prose, no markdown fences):
+{
+  "intro_offer": "3 for £45" or null,
+  "drop_in": "£30" or null,
+  "packages": "5 for £140 · 10 for £250 · Unlimited £220/mo" or null,
+  "confidence": 0-1 number based on how recent and reliable the sources are,
+  "notes": "where you got it, or null"
+}
+
+If you cannot find reliable current pricing, set all price fields to null and confidence to 0.`;
+  const res = await callWithRetry(() => searchModel.generateContent(prompt));
+  if (!res || res._isError) return null;
+  let text;
+  try { text = res.response.text(); } catch { return null; }
+  const cleaned = text.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '').trim();
+  // Search-grounded responses often include grounding metadata as prose; find the JSON block.
+  const start = cleaned.indexOf('{');
+  const end = cleaned.lastIndexOf('}');
+  if (start === -1 || end === -1) return null;
+  try {
+    return JSON.parse(cleaned.slice(start, end + 1));
+  } catch {
+    return null;
+  }
 }
 
 // Ask Gemini (with Google search grounding) to find the real URL for a
