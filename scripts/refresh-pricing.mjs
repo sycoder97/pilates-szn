@@ -161,7 +161,17 @@ async function main() {
       console.error(`   ✗ ${err.message}`);
       log.push({ studio: studio.name, status: 'error', error: err.message });
     }
-    await sleep(1500); // be polite to studio sites + stay under free tier RPM
+    // Flash-lite free tier = 30 RPM. Pace at ~24 RPM to leave headroom for
+    // retries + the occasional search call during URL healing.
+    await sleep(2500);
+  }
+
+  // If more than half the studios errored, exit non-zero so GitHub Actions
+  // shows the workflow as failed (prevents silent quota issues going green).
+  const errorCount = log.filter(l => l.status === 'error').length;
+  if (errorCount > targets.length / 2) {
+    console.error(`\n⚠ ${errorCount}/${targets.length} studios errored — marking workflow as failed`);
+    process.exitCode = 1;
   }
 
   // Apply manual overrides on top
@@ -239,22 +249,18 @@ Use Google Search to find the real current website. Requirements:
 - Must resolve to a working site
 
 Respond with ONLY the URL, nothing else. If you cannot find it with confidence, respond with "NONE".`;
-  try {
-    const res = await searchModel.generateContent(prompt);
-    const text = res.response.text().trim();
-    if (text === 'NONE' || !text.startsWith('http')) return null;
-    // Strip any markdown or quotes
-    const url = text.replace(/[`"'\s]/g, '').split(/\s/)[0];
-    return url;
-  } catch (err) {
-    console.error(`   search error: ${err.message}`);
-    return null;
-  }
+  const res = await callWithRetry(() => searchModel.generateContent(prompt));
+  if (!res) return null;
+  const text = res.response.text().trim();
+  if (text === 'NONE' || !text.startsWith('http')) return null;
+  const url = text.replace(/[`"'\s]/g, '').split(/\s/)[0];
+  return url;
 }
 
 async function extract(html, studio) {
   const prompt = `${EXTRACTION_PROMPT}\n\nStudio: ${studio.name}\nURL: ${studio.website}\n\nHTML:\n${html}`;
-  const result = await model.generateContent(prompt);
+  const result = await callWithRetry(() => model.generateContent(prompt));
+  if (!result) return null;
   const text = result.response.text();
   try {
     const parsed = JSON.parse(text);
@@ -264,6 +270,29 @@ async function extract(html, studio) {
     console.error(`   couldn't parse: ${text.slice(0, 120)}`);
     return null;
   }
+}
+
+// Retry wrapper for Gemini calls. Handles 429 rate-limits with exponential
+// backoff. On persistent failure, returns null so the caller can continue
+// rather than crashing the whole batch.
+async function callWithRetry(fn, attempts = 3) {
+  let delay = 30_000;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      const msg = err?.message || '';
+      const is429 = msg.includes('429') || msg.includes('Too Many Requests') || msg.includes('RESOURCE_EXHAUSTED');
+      if (!is429 || i === attempts - 1) {
+        console.error(`   gemini error: ${msg.slice(0, 200)}`);
+        return null;
+      }
+      console.log(`   429 rate-limit — waiting ${delay / 1000}s`);
+      await sleep(delay);
+      delay *= 2;
+    }
+  }
+  return null;
 }
 
 // Mutates studio in place. Returns true if anything changed.
