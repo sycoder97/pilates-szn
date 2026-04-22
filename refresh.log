@@ -1,45 +1,55 @@
 {
-  "ranAt": "2026-04-22T20:17:18.503Z",
+  "ranAt": "2026-04-22T20:21:52.700Z",
   "results": [
     {
       "studio": "Heartcore",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Ten Health & Fitness",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "FRAME",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "1Rebel",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "LevelOut",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Tempo 301",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Psycle",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Reformcore",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "KARVE Club",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "triyoga",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Nobu Pilates",
@@ -47,11 +57,13 @@
     },
     {
       "studio": "Bodyism",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Core Flex Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Avalon Pilates",
@@ -59,15 +71,18 @@
     },
     {
       "studio": "Studio Anatomy",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Blok",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Blanc Space",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "PBB Studio",
@@ -75,19 +90,23 @@
     },
     {
       "studio": "Bootcamp Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Flowing Body",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Flow Ldn",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "East of Eden",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "First Reform",
@@ -95,19 +114,23 @@
     },
     {
       "studio": "Pilates HQ",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Core Pilates Studios",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Club Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "FÔLD Reformer",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Reformer Collective",
@@ -119,19 +142,23 @@
     },
     {
       "studio": "Scandi Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "FS8",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Hypecore",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Reformer LDN",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "LOAD",
@@ -139,35 +166,43 @@
     },
     {
       "studio": "Truform",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "MAD Lagree",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Oncore",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Pilates Squared",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Kovaa Studio",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Plum Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "House of Balance",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Exhale Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Kinetic Pilates",
@@ -175,11 +210,13 @@
     },
     {
       "studio": "Curve Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Reform & Vibes",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Strong & Bendy",
@@ -191,47 +228,58 @@
     },
     {
       "studio": "Freedom Clinics",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Milo & The Bull",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Pause Studio",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Complete Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Strong Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "BST Lagree",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "FORM Studios",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Barrecore",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Refine Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Restart Reformer",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     },
     {
       "studio": "Chapel Studio Pilates",
-      "status": "extract-failed"
+      "status": "extract-failed",
+      "error": "gemini call failed (null result)"
     }
   ]
 }
