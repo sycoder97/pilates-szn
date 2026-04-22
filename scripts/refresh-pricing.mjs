@@ -125,8 +125,15 @@ async function main() {
       }
       let trimmed = trimHTML(html);
       let extracted = await extract(trimmed, studio);
-      if (!extracted) {
-        log.push({ studio: studio.name, status: 'extract-failed' });
+      if (!extracted || extracted._error) {
+        log.push({
+          studio: studio.name,
+          status: 'extract-failed',
+          error: extracted?._error,
+          raw: extracted?._raw,
+        });
+        console.error(`   ${extracted?._error || 'extract returned null'}`);
+        if (extracted?._raw) console.error(`   raw: ${extracted._raw.slice(0, 160)}`);
         continue;
       }
       // If the URL loads but serves the wrong studio (common when a domain
@@ -260,15 +267,24 @@ Respond with ONLY the URL, nothing else. If you cannot find it with confidence, 
 async function extract(html, studio) {
   const prompt = `${EXTRACTION_PROMPT}\n\nStudio: ${studio.name}\nURL: ${studio.website}\n\nHTML:\n${html}`;
   const result = await callWithRetry(() => model.generateContent(prompt));
-  if (!result) return null;
-  const text = result.response.text();
+  if (!result) {
+    return { _error: 'gemini call failed (null result)' };
+  }
+  let text;
   try {
-    const parsed = JSON.parse(text);
+    text = result.response.text();
+  } catch (err) {
+    return { _error: `response.text() threw: ${err.message}` };
+  }
+  // Strip markdown code fences if Gemini decided to add them despite
+  // responseMimeType: application/json.
+  const cleaned = text.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '').trim();
+  try {
+    const parsed = JSON.parse(cleaned);
     if (typeof parsed.confidence !== 'number') parsed.confidence = 0;
     return parsed;
-  } catch {
-    console.error(`   couldn't parse: ${text.slice(0, 120)}`);
-    return null;
+  } catch (err) {
+    return { _error: `parse failed: ${err.message}`, _raw: text.slice(0, 300) };
   }
 }
 
