@@ -257,7 +257,7 @@ Use Google Search to find the real current website. Requirements:
 
 Respond with ONLY the URL, nothing else. If you cannot find it with confidence, respond with "NONE".`;
   const res = await callWithRetry(() => searchModel.generateContent(prompt));
-  if (!res) return null;
+  if (!res || res._isError) return null;
   const text = res.response.text().trim();
   if (text === 'NONE' || !text.startsWith('http')) return null;
   const url = text.replace(/[`"'\s]/g, '').split(/\s/)[0];
@@ -269,6 +269,9 @@ async function extract(html, studio) {
   const result = await callWithRetry(() => model.generateContent(prompt));
   if (!result) {
     return { _error: 'gemini call failed (null result)' };
+  }
+  if (result._isError) {
+    return { _error: result._error };
   }
   let text;
   try {
@@ -293,22 +296,26 @@ async function extract(html, studio) {
 // rather than crashing the whole batch.
 async function callWithRetry(fn, attempts = 3) {
   let delay = 30_000;
+  let lastMsg = 'unknown error';
   for (let i = 0; i < attempts; i++) {
     try {
       return await fn();
     } catch (err) {
-      const msg = err?.message || '';
+      const msg = err?.message || String(err);
+      lastMsg = msg;
       const is429 = msg.includes('429') || msg.includes('Too Many Requests') || msg.includes('RESOURCE_EXHAUSTED');
       if (!is429 || i === attempts - 1) {
-        console.error(`   gemini error: ${msg.slice(0, 200)}`);
-        return null;
+        console.error(`   gemini error: ${msg.slice(0, 400)}`);
+        const out = { _error: msg.slice(0, 400) };
+        Object.defineProperty(out, '_isError', { value: true });
+        return out;
       }
       console.log(`   429 rate-limit — waiting ${delay / 1000}s`);
       await sleep(delay);
       delay *= 2;
     }
   }
-  return null;
+  return { _error: lastMsg.slice(0, 400), _isError: true };
 }
 
 // Mutates studio in place. Returns true if anything changed.
