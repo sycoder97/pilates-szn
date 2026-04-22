@@ -175,8 +175,6 @@ async function hydrate(candidate) {
     lng: null,
     intro: null,
     packages: null,
-    review: candidate.why_new || '',
-    rating: null,
     website: candidate.website,
     lastVerified: today,
     candidate: true, // flag so it's obvious in the PR
@@ -203,15 +201,14 @@ async function hydrate(candidate) {
     .replace(/\s+/g, ' ')
     .slice(0, 150_000);
 
-  const prompt = `Extract pricing and description from this London pilates studio's HTML.
+  const prompt = `Extract pricing from this London pilates studio's HTML.
 
 Return JSON:
 {
   "intro_offer": "3 for £45" or null,
   "drop_in": "£28" or null,
   "packages": "one-line summary of pack pricing and/or membership" or null,
-  "review": "one-sentence description of the studio's vibe or differentiator (max 120 chars)",
-  "types": ["Reformer"|"Mat"|"Lagree"|"Barre"|"Hot"]
+  "types": ["Reformer"|"Mat"|"Tower"|"Lagree"|"Barre"|"Hot"]
 }
 
 Studio: ${candidate.name}
@@ -224,7 +221,6 @@ HTML: ${trimmed}`;
     if (parsed.intro_offer) base.intro = parsed.intro_offer;
     const pkgs = [parsed.drop_in && `Drop-in ${parsed.drop_in}`, parsed.packages].filter(Boolean).join(' · ');
     if (pkgs) base.packages = pkgs;
-    if (parsed.review) base.review = parsed.review;
     if (Array.isArray(parsed.types) && parsed.types.length) base.types = parsed.types;
   } catch (err) {
     console.error(`   extraction failed: ${err.message}`);

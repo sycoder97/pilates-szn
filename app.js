@@ -102,14 +102,12 @@
       <button class="card" type="button" data-name="${esc(s.name)}" aria-label="View ${esc(s.name)}">
         <div class="card-head">
           <h3 class="card-name">${esc(s.name)}</h3>
-          ${s.rating ? `<span class="card-rating">${s.rating.toFixed(1)}</span>` : ''}
         </div>
         <div class="card-meta">
           <span class="tag tag-zone">${esc(zoneLabel)} London</span>
           ${types}
         </div>
         <p class="card-areas">${esc(s.areas)}</p>
-        ${s.review ? `<p class="card-review">"${esc(s.review)}"</p>` : ''}
         <dl class="card-pricing">
           ${s.intro ? `<dt>Intro</dt><dd>${esc(s.intro)}</dd>` : ''}
           ${s.minPrice ? `<dt>From</dt><dd>£${Math.round(s.minPrice)}/class</dd>` : (s.packages ? `<dt>From</dt><dd class="muted">${esc(s.packages)}</dd>` : '')}
@@ -130,8 +128,7 @@
     const zoneLabel = { C: 'Central', N: 'North', S: 'South', E: 'East', W: 'West' }[s.zone] || s.zone;
     modalBody.innerHTML = `
       <h2>${esc(s.name)}</h2>
-      <p class="sub">${esc(zoneLabel)} London · ${esc(types)}${s.rating ? ` · ★ ${s.rating.toFixed(1)}` : ''}</p>
-      ${s.review ? `<blockquote class="modal-quote">"${esc(s.review)}"</blockquote>` : ''}
+      <p class="sub">${esc(zoneLabel)} London · ${esc(types)}</p>
       <dl>
         <div class="modal-row"><dt>Locations</dt><dd>${esc(s.areas)}</dd></div>
         <div class="modal-row"><dt>Method</dt><dd>${esc(types)}</dd></div>

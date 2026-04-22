@@ -312,21 +312,6 @@ section { padding: clamp(48px, 7vw, 80px) 0; }
   letter-spacing: -0.01em;
   margin: 0;
 }
-.card-rating {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink);
-  white-space: nowrap;
-}
-.card-rating::before {
-  content: '★';
-  color: var(--warm);
-  font-size: 14px;
-}
-
 .card-meta {
   display: flex;
   flex-wrap: wrap;
@@ -355,16 +340,6 @@ section { padding: clamp(48px, 7vw, 80px) 0; }
   color: var(--ink-soft);
   margin: 0;
   line-height: 1.5;
-}
-
-.card-review {
-  font-size: 14px;
-  color: var(--ink);
-  margin: 0;
-  line-height: 1.5;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
 }
 
 .card-pricing {
