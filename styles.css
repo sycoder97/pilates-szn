@@ -356,15 +356,43 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   background: var(--bg);
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  padding: 22px 22px 18px;
+  padding: 0;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 12px;
   cursor: pointer;
   transition: background .12s;
+  overflow: hidden;
 }
 .card:hover { background: var(--bg-2); }
+.card-visual {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.card-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Logos / square brand marks centre with no crop, against the method tint.
+   Wide hero photos still cover the full frame. */
+.card-visual img.is-logo {
+  object-fit: contain;
+  padding: 18px;
+}
+.card-body {
+  padding: 18px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
 .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .card-name {
   font-family: var(--sans);
