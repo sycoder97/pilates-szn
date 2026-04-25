@@ -35,12 +35,6 @@
     const featured = studios.slice(0, 6);
     const grid = document.getElementById('tile-grid');
     grid.innerHTML = featured.map(tileHTML).join('');
-
-    // --- saved count in nav ---
-    try {
-      const saved = JSON.parse(localStorage.getItem('pilatesszn.shortlist') || '[]');
-      document.getElementById('saved-count').textContent = String(saved.length).padStart(2, '0');
-    } catch { /* ignore */ }
   }
 
   function tileHTML(s) {
