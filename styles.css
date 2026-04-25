@@ -343,11 +343,14 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   color: var(--ink-soft);
 }
 
-/* studio grid */
+/* studio grid — capped at 3 columns so cards keep editorial proportions */
 .directory { padding: 0; }
 .studio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1024px) {
+  .studio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .card {
   background: var(--bg);
@@ -544,7 +547,109 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   padding-top: 2px;
 }
 .modal-row dd { margin: 0; font-weight: 500; }
-.modal-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+.modal-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; align-items: center; }
+
+.btn-compare {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s;
+}
+.btn-compare:hover { border-color: var(--ink); }
+.btn-compare[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+/* --------- compare page --------- */
+
+.compare { padding: 0; }
+.compare-table {
+  --cols: 2;
+  display: grid;
+  /* 1 label column, then N studio columns */
+  grid-template-columns: 140px repeat(var(--cols), minmax(0, 1fr));
+}
+
+.cmp-row {
+  display: contents; /* let parent grid drive the layout cell-by-cell */
+}
+.cmp-cell {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 18px 20px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+.cmp-cell:last-child { border-right: none; }
+
+.cmp-row.cmp-head .cmp-cell,
+.cmp-row.cmp-cta-row .cmp-cell {
+  background: var(--bg);
+}
+.cmp-row.cmp-head .cmp-cell {
+  padding-top: 22px;
+  padding-bottom: 18px;
+}
+.cmp-name {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  line-height: 1.05;
+}
+.cmp-remove { font-size: 10px; }
+
+.cmp-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--bg);
+}
+.cmp-row.cmp-head .cmp-label,
+.cmp-row.cmp-cta-row .cmp-label {
+  /* head + cta rows have no label text — keep the cell drawn for alignment */
+  background: var(--bg);
+}
+
+.cmp-cell .tag {
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.cmp-muted { color: var(--ink-soft); }
+.cmp-cell strong { font-weight: 500; font-size: 18px; letter-spacing: -0.3px; }
+
+@media (max-width: 760px) {
+  /* On phones the grid would crush 3 columns into nothing. Stack each
+     studio as its own block, label rows still visible inline. */
+  .compare-table {
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--line);
+  }
+  .cmp-cell { border-right: none; }
+  .cmp-row.cmp-head .cmp-cell { border-bottom: 1px solid var(--ink); padding-top: 24px; }
+  .cmp-label::before { content: ''; }
+}
 .report-row { margin: 24px 0 0; text-align: center; font-size: 12px; }
 .report-link {
   color: var(--ink-soft);

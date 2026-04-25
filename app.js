@@ -164,6 +164,7 @@
       <div class="modal-cta">
         <a class="btn btn-primary" href="${outboundURL(s)}" target="_blank" rel="noopener sponsored">Book at ${esc(s.name)} →</a>
         <a class="btn btn-ghost" href="${esc(s.website)}" target="_blank" rel="noopener">Visit website</a>
+        <button class="btn btn-compare" type="button" data-compare="${esc(s.name)}" aria-pressed="${compareHas(s.name)}">${compareLabel(s.name)}</button>
       </div>
       <p class="report-row"><a href="${reportMailto(s)}" class="report-link">Something wrong with this listing? Report it →</a></p>
     `;
@@ -174,8 +175,24 @@
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-  modal.addEventListener('click', e => { if (e.target.dataset.close !== undefined) closeModal(); });
+  modal.addEventListener('click', e => {
+    if (e.target.dataset.close !== undefined) { closeModal(); return; }
+    const cmp = e.target.closest('[data-compare]');
+    if (cmp) {
+      const name = cmp.dataset.compare;
+      window.PILATES_COMPARE.toggle(name);
+      cmp.textContent = compareLabel(name);
+      cmp.setAttribute('aria-pressed', String(compareHas(name)));
+    }
+  });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal(); });
+
+  function compareHas(name) {
+    return !!(window.PILATES_COMPARE && window.PILATES_COMPARE.has(name));
+  }
+  function compareLabel(name) {
+    return compareHas(name) ? '✓ Comparing' : '+ Compare';
+  }
 
   // --- filtering events ---
   document.querySelectorAll('.chip-group').forEach(group => {
