@@ -8,6 +8,7 @@
     "refresh": "node scripts/refresh-pricing.mjs",
     "refresh:dry": "node scripts/refresh-pricing.mjs --dry-run",
     "refresh:one": "node scripts/refresh-pricing.mjs --only",
+    "refresh:images": "node scripts/refresh-images.mjs",
     "check-links": "node scripts/check-product-links.mjs"
   },
   "dependencies": {

@@ -125,24 +125,49 @@
     const zoneLabel = { C: 'Central', N: 'North', S: 'South', E: 'East', W: 'West' }[s.zone] || s.zone;
     return `
       <button class="card" type="button" data-name="${esc(s.name)}" aria-label="View ${esc(s.name)}">
-        <div class="card-head">
-          <h3 class="card-name">${esc(s.name)}</h3>
-        </div>
-        <div class="card-meta">
-          <span class="tag tag-zone">${esc(zoneLabel)} London</span>
-          ${types}
-        </div>
-        <p class="card-areas">${esc(s.areas)}</p>
-        <dl class="card-pricing">
-          ${s.intro ? `<dt>Intro</dt><dd>${esc(s.intro)}</dd>` : ''}
-          ${s.minPrice ? `<dt>From</dt><dd>£${Math.round(s.minPrice)}/class</dd>` : (s.packages ? `<dt>From</dt><dd class="muted">${esc(s.packages)}</dd>` : '')}
-        </dl>
-        <div class="card-foot">
-          <span class="verified">Verified ${esc(s.lastVerified || '—')}</span>
-          <a class="book-btn" href="${outboundURL(s)}" target="_blank" rel="noopener sponsored" data-studio="${esc(s.name)}">Book</a>
+        ${cardVisual(s)}
+        <div class="card-body">
+          <div class="card-head">
+            <h3 class="card-name">${esc(s.name)}</h3>
+          </div>
+          <div class="card-meta">
+            <span class="tag tag-zone">${esc(zoneLabel)} London</span>
+            ${types}
+          </div>
+          <p class="card-areas">${esc(s.areas)}</p>
+          <dl class="card-pricing">
+            ${s.intro ? `<dt>Intro</dt><dd>${esc(s.intro)}</dd>` : ''}
+            ${s.minPrice ? `<dt>From</dt><dd>£${Math.round(s.minPrice)}/class</dd>` : (s.packages ? `<dt>From</dt><dd class="muted">${esc(s.packages)}</dd>` : '')}
+          </dl>
+          <div class="card-foot">
+            <span class="verified">Verified ${esc(s.lastVerified || '—')}</span>
+            <a class="book-btn" href="${outboundURL(s)}" target="_blank" rel="noopener sponsored" data-studio="${esc(s.name)}">Book</a>
+          </div>
         </div>
       </button>
     `;
+  }
+
+  // Per-method tint applied behind the image so the fallback (or a transparent
+  // logo) stays on-brand.
+  const METHOD_TINT = {
+    Reformer: '#E5E3DC', Mat: '#E8E4DA', Tower: '#E6DFCE',
+    Lagree: '#DAD8D0', Barre: '#EAE4D5', Hot: '#DED9CF',
+  };
+
+  function cardVisual(s) {
+    const tint = METHOD_TINT[(s.types || [])[0]] || '#E5E3DC';
+    const placeholder = `repeating-linear-gradient(90deg, ${tint} 0 1px, transparent 1px 6px), ${tint}`;
+    if (s.image) {
+      return `
+        <div class="card-visual" style="background: ${placeholder};">
+          <img src="${esc(s.image)}" alt="${esc(s.name)}" loading="lazy" referrerpolicy="no-referrer"
+               onload="if(this.naturalWidth && (this.naturalWidth < 400 || this.naturalWidth/this.naturalHeight < 1.15)) this.classList.add('is-logo')"
+               onerror="this.style.display='none'" />
+        </div>
+      `;
+    }
+    return `<div class="card-visual" style="background: ${placeholder};"></div>`;
   }
 
   // --- modal ---
