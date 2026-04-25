@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>pilates·szn — every pilates studio in London, indexed honestly</title>
-<meta name="description" content="Verified pricing. Verified schedules. A monochrome index of every pilates studio in London. No rankings, no affiliate-bait." />
-<meta property="og:title" content="pilates·szn — indexed honestly" />
-<meta property="og:description" content="Every pilates studio in London, with verified pricing and no opinions." />
+<title>pilates·szn — every pilates studio in London, in one place</title>
+<meta name="description" content="Every London pilates studio, all in one place. Pricing checked weekly. Filter by zone, method, or price." />
+<meta property="og:title" content="pilates·szn — every London pilates studio, in one place" />
+<meta property="og:description" content="Every London pilates studio, all in one place. Pricing checked weekly." />
 <meta property="og:type" content="website" />
 <meta name="theme-color" content="#FAFAF7" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=b1" />
+<link rel="stylesheet" href="styles.css?v=b5" />
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FAFAF7'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='DM Sans' font-size='28' font-weight='500' fill='%23111110'%3Ep%C2%B7s%3C/text%3E%3C/svg%3E" />
 </head>
@@ -21,12 +21,10 @@
 
 <div class="nav-bar">
   <div class="nav-left">London / 2026</div>
-  <div class="nav-mark">pilates·szn</div>
+  <div class="nav-mark"><a href="/">pilates·szn</a></div>
   <div class="nav-right">
-    <a href="/directory.html">Directory</a>
-    <a href="/compare.html">Compare</a>
+    <a href="/" class="active">Directory</a>
     <a href="/shop.html">Shop</a>
-    <a href="/shortlist.html" id="nav-saved">Saved·<span id="saved-count">0</span></a>
   </div>
 </div>
 <div class="rule"></div>
@@ -39,7 +37,7 @@
     studio in London,<br/>
     <em>indexed honestly.</em>
   </h1>
-  <p class="hero-sub">Verified pricing. No rankings, no affiliate-bait, no opinions on studios we can't measure.</p>
+  <p class="hero-sub">Every studio, all in one place. Pricing checked weekly.</p>
 </section>
 
 <div class="rule"></div>
@@ -66,17 +64,92 @@
 
 <div class="rule"></div>
 
-<!-- Tile grid -->
-<section class="tile-grid" id="tile-grid" aria-label="Featured studios"></section>
+<!-- Filters -->
+<section class="filters-bar" aria-label="Filter studios">
+  <div class="filters-search">
+    <span class="mono">Search</span>
+    <input type="search" id="search" placeholder="Studio name or neighbourhood…" aria-label="Search studios" />
+  </div>
+
+  <div class="filters-row" role="toolbar">
+    <div class="chip-group" data-group="zone">
+      <span class="chip-label">Zone</span>
+      <button class="chip active" data-value="">All</button>
+      <button class="chip" data-value="C">Central</button>
+      <button class="chip" data-value="N">North</button>
+      <button class="chip" data-value="E">East</button>
+      <button class="chip" data-value="S">South</button>
+      <button class="chip" data-value="W">West</button>
+    </div>
+    <div class="chip-group" data-group="type">
+      <span class="chip-label">Method</span>
+      <button class="chip active" data-value="">All</button>
+      <button class="chip" data-value="Reformer">Reformer</button>
+      <button class="chip" data-value="Mat">Mat</button>
+      <button class="chip" data-value="Tower">Tower</button>
+      <button class="chip" data-value="Lagree">Lagree</button>
+      <button class="chip" data-value="Barre">Barre</button>
+      <button class="chip" data-value="Hot">Hot</button>
+    </div>
+    <div class="chip-group" data-group="price">
+      <span class="chip-label">Price</span>
+      <button class="chip active" data-value="">All</button>
+      <button class="chip" data-value="under20">Under £20</button>
+      <button class="chip" data-value="mid">£20–£30</button>
+      <button class="chip" data-value="premium">£30+</button>
+    </div>
+  </div>
+
+  <div class="filters-meta">
+    <span id="result-count" class="mono">—</span>
+    <button id="clear-filters" class="text-btn" type="button">Clear filters</button>
+  </div>
+</section>
 
 <div class="rule"></div>
 
-<!-- Landing footer -->
+<!-- Studio grid -->
+<section id="directory" class="directory">
+  <div id="studio-grid" class="studio-grid" aria-live="polite"></div>
+  <p id="empty-state" class="empty-state" hidden>No studios match these filters. <button class="text-btn" id="empty-clear" type="button">Clear filters</button></p>
+</section>
+
+<div class="rule"></div>
+
+<!-- About strip -->
+<section class="about-strip">
+  <div class="about-strip-col">
+    <p class="mono">About the index</p>
+    <p>Pilates pricing in London is a mess — hidden behind booking widgets, intro offers expire without warning, half the blogs ranking on Google list studios that closed two years ago.</p>
+  </div>
+  <div class="about-strip-col">
+    <p class="mono">Editorial</p>
+    <p>One source of truth, verified weekly. <a href="mailto:sieyin1997@gmail.com">Tell us</a> if a studio's details look wrong and we'll fix it. Affiliate links never influence the order.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- Footer -->
 <div class="land-foot">
-  <a href="/directory.html">Browse full directory →</a>
-  <span id="foot-verified">Verified —</span>
+  <span>© <span id="year"></span> pilates·szn · London</span>
+  <span><a href="mailto:sieyin1997@gmail.com">Contact</a> · <a href="/shop.html">Shop</a></span>
 </div>
 
-<script src="landing.js"></script>
+<!-- Studio detail modal -->
+<div class="modal" id="studio-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <article class="modal-panel" role="document">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-body" id="modal-body"></div>
+  </article>
+</div>
+
+<!-- Hidden hooks app.js still looks for -->
+<span id="studio-count" hidden></span>
+<span id="last-verified" hidden></span>
+
+<script src="config.js"></script>
+<script src="app.js?v=b5"></script>
 </body>
 </html>

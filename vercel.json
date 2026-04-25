@@ -4,6 +4,10 @@
   "framework": null,
   "outputDirectory": ".",
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/directory.html", "destination": "/", "permanent": true },
+    { "source": "/directory", "destination": "/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

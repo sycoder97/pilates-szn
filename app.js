@@ -25,12 +25,37 @@
       });
       document.getElementById('studio-count').textContent = state.studios.length;
       document.getElementById('last-verified').textContent = formatLatestVerified(state.studios);
+      paintStats(state.studios);
       render();
     })
     .catch(err => {
       grid.innerHTML = `<p class="empty-state">Couldn't load the directory. Please refresh.</p>`;
       console.error(err);
     });
+
+  // Stats strip on the merged landing/directory page. No-op if the elements
+  // aren't present (e.g. a future page that doesn't show stats).
+  function paintStats(studios) {
+    const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+    set('stat-count', String(studios.length).padStart(2, '0'));
+
+    const prices = studios.map(s => s.minPrice).filter(n => n != null && isFinite(n));
+    set('stat-cheapest', prices.length ? `£${Math.round(Math.min(...prices))}` : '—');
+
+    const introCount = studios.filter(s => s.intro && /£|for/.test(s.intro)).length;
+    set('stat-intros', String(introCount).padStart(2, '0'));
+
+    const latest = studios.map(s => s.lastVerified).filter(Boolean).sort().pop();
+    set('stat-verified', formatQuarter(latest));
+  }
+
+  // "2026-04-22" → "Q2·26"
+  function formatQuarter(iso) {
+    if (!iso) return '—';
+    const [y, m] = iso.split('-').map(n => parseInt(n));
+    const q = Math.floor((m - 1) / 3) + 1;
+    return `Q${q}·${String(y).slice(2)}`;
+  }
 
   // --- price parsing ---
   // Parse the lowest ongoing per-class price from the packages field.
@@ -178,21 +203,6 @@
     });
     render();
   }
-
-  // Guide quick-filters (anchor links with data-filter="type:Reformer" etc.)
-  document.querySelectorAll('[data-filter]').forEach(el => {
-    el.addEventListener('click', () => {
-      const [key, value] = el.dataset.filter.split(':');
-      const group = document.querySelector(`.chip-group[data-group="${key}"]`);
-      if (!group) return;
-      const match = group.querySelector(`.chip[data-value="${value}"]`);
-      if (!match) return;
-      group.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-      match.classList.add('active');
-      state.filters[key] = value;
-      render();
-    });
-  });
 
   // --- report-error link (mailto with prefilled subject + body) ---
   function reportMailto(s) {

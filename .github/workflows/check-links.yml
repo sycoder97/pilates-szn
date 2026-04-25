@@ -1,0 +1,40 @@
+name: Check product links
+
+on:
+  schedule:
+    # Every Monday at 09:00 UTC — one hour after the pricing refresh, so the
+    # two jobs don't fight over runner time.
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+    # Manual trigger from the GitHub UI
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Save the human-readable report in case the run fails — lets you see
+      # exactly which links broke without rerunning locally. `set -o pipefail`
+      # preserves the script's non-zero exit code through the tee pipe.
+      - name: Run link checker
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run check-links | tee link-check.log
+
+      - name: Save report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-report
+          path: link-check.log
+          retention-days: 30
