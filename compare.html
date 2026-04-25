@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Compare — pilates·szn</title>
+<meta name="description" content="Compare London pilates studios side by side — pricing, methods, location, intro offers." />
+<meta name="theme-color" content="#FAFAF7" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=b6" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FAFAF7'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='DM Sans' font-size='28' font-weight='500' fill='%23111110'%3Ep%C2%B7s%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<div class="nav-bar">
+  <div class="nav-left">Compare / Side by side</div>
+  <div class="nav-mark"><a href="/">pilates·szn</a></div>
+  <div class="nav-right">
+    <a href="/">Directory</a>
+    <a href="/shop.html">Shop</a>
+    <a href="/compare.html" class="active">Compare·<span id="compare-count">00</span></a>
+  </div>
+</div>
+<div class="rule"></div>
+
+<!-- Hero -->
+<section class="hero hero-tight">
+  <p class="hero-eyebrow">Vol. 04 — Side by side</p>
+  <h1>
+    Two or three studios.<br/>
+    <em>Same row.</em>
+  </h1>
+  <p class="hero-sub">Pick up to 3 from the directory and read them across — pricing, methods, location, intro offers.</p>
+</section>
+
+<div class="rule"></div>
+
+<!-- Toolbar -->
+<section class="filters-bar" aria-label="Compare toolbar">
+  <div class="filters-meta">
+    <span id="result-count" class="mono">—</span>
+    <button id="clear-compare" class="text-btn" type="button" hidden>Clear comparison</button>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- Comparison table / empty state -->
+<section class="compare">
+  <div id="compare-table" class="compare-table" aria-live="polite"></div>
+  <div id="empty-state" class="empty-state" hidden>
+    <p class="serif-it" style="font-size: 22px; color: var(--ink); margin: 0 0 12px;">Nothing to compare yet.</p>
+    <p>Open a studio from the <a href="/" class="text-btn">directory</a> and tap <em>+ Compare</em>. Pick 2 or 3.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- Footer -->
+<div class="land-foot">
+  <span>© <span id="year"></span> pilates·szn · London</span>
+  <span><a href="mailto:sieyin1997@gmail.com">Contact</a> · <a href="/">Home</a></span>
+</div>
+
+<script src="config.js"></script>
+<script src="compare-store.js?v=b6"></script>
+<script src="compare.js?v=b6"></script>
+</body>
+</html>
