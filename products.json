@@ -1,0 +1,167 @@
+{
+  "_notes": "Curated affiliate products. Replace each affiliateUrl with your real tracking URL once you're approved by each network (Awin, Amazon UK, iHerb, brand-direct, etc). The plain retailer URL works as a placeholder until then. Categories: activewear, matcha, recovery, essentials, accessories.",
+  "products": [
+    {
+      "name": "Align Leggings",
+      "brand": "Lululemon",
+      "category": "activewear",
+      "description": "The cult classic. Buttery Nulu fabric, no-dig waistband, the leggings every pilates girl owns.",
+      "priceRange": "£88",
+      "affiliateUrl": "https://shop.lululemon.com/c/women-leggings/_/N-7vf",
+      "tag": "cult favourite"
+    },
+    {
+      "name": "Soft Gauze Cover Up",
+      "brand": "Alo Yoga",
+      "category": "activewear",
+      "description": "Post-class throw-on. The LA-to-Notting Hill girl's uniform.",
+      "priceRange": "£82",
+      "affiliateUrl": "https://www.aloyoga.com/collections/womens-tops",
+      "tag": "pinterest girl"
+    },
+    {
+      "name": "Power Leggings",
+      "brand": "Sweaty Betty",
+      "category": "activewear",
+      "description": "High-compression. Bum-sculpt magic. Won every activewear magazine test.",
+      "priceRange": "£82",
+      "affiliateUrl": "https://www.sweatybetty.com/uk/power-workout-leggings.html"
+    },
+    {
+      "name": "Let's Move High Rise Legging",
+      "brand": "Varley",
+      "category": "activewear",
+      "description": "Quiet-luxury activewear. Second-skin feel, holds its shape wash after wash.",
+      "priceRange": "£95",
+      "affiliateUrl": "https://www.varley.com/collections/leggings"
+    },
+    {
+      "name": "Seamless Bra",
+      "brand": "TALA",
+      "category": "activewear",
+      "description": "Low-impact, buttery ribbed fabric. Made with recycled materials.",
+      "priceRange": "£30",
+      "affiliateUrl": "https://uk.wearetala.com/collections/bras"
+    },
+
+    {
+      "name": "Grip Socks",
+      "brand": "ToeSox",
+      "category": "essentials",
+      "description": "Non-negotiable. No slip on the reformer straps, actually stay put.",
+      "priceRange": "£18",
+      "affiliateUrl": "https://www.amazon.co.uk/s?k=toesox+grip+socks",
+      "tag": "essential"
+    },
+    {
+      "name": "Pilates Soft Ball",
+      "brand": "Bala",
+      "category": "essentials",
+      "description": "For at-home work between studio sessions. Ab burn guaranteed.",
+      "priceRange": "£18",
+      "affiliateUrl": "https://shopbala.com/collections/all"
+    },
+    {
+      "name": "Resistance Band Set",
+      "brand": "BALA Bangles",
+      "category": "essentials",
+      "description": "Three tensions, fabric (not rubber — won't roll or snap). Travel-kit essential.",
+      "priceRange": "£25",
+      "affiliateUrl": "https://www.amazon.co.uk/s?k=fabric+resistance+bands"
+    },
+    {
+      "name": "Cork Yoga Mat",
+      "brand": "Liforme",
+      "category": "essentials",
+      "description": "Cork grip gets better when wet — for hot mat days. Alignment lines printed in.",
+      "priceRange": "£120",
+      "affiliateUrl": "https://www.liforme.com/collections/all-mats",
+      "tag": "splurge"
+    },
+
+    {
+      "name": "Ceremonial Grade Matcha",
+      "brand": "PerfectTed",
+      "category": "matcha",
+      "description": "The one in every pilates girl's kitchen. Smooth, no bitterness, UK-based.",
+      "priceRange": "£22",
+      "affiliateUrl": "https://perfectted.com/products/ceremonial-grade-matcha",
+      "tag": "cult favourite"
+    },
+    {
+      "name": "Matcha Starter Kit",
+      "brand": "Cha Cha Matcha",
+      "category": "matcha",
+      "description": "Whisk, scoop, bowl, and their house matcha. Pretty enough for the kitchen shelf.",
+      "priceRange": "£45",
+      "affiliateUrl": "https://www.chachamatcha.com/pages/shop"
+    },
+    {
+      "name": "Electric Matcha Whisk",
+      "brand": "Kyoto Dew",
+      "category": "matcha",
+      "description": "No more clumps. 90 seconds flat. Your daily ritual upgraded.",
+      "priceRange": "£25",
+      "affiliateUrl": "https://www.amazon.co.uk/s?k=electric+matcha+whisk"
+    },
+
+    {
+      "name": "Marine Collagen",
+      "brand": "Ancient + Brave",
+      "category": "recovery",
+      "description": "The one founded by a yoga teacher. Tasteless in coffee, skin glow within 6 weeks.",
+      "priceRange": "£35",
+      "affiliateUrl": "https://ancientandbrave.earth/products/true-collagen"
+    },
+    {
+      "name": "Magnesium Flakes",
+      "brand": "BetterYou",
+      "category": "recovery",
+      "description": "For the bath after a hard reformer class. Actually eases soreness.",
+      "priceRange": "£12",
+      "affiliateUrl": "https://bybi.com"
+    },
+    {
+      "name": "Foam Roller",
+      "brand": "TriggerPoint",
+      "category": "recovery",
+      "description": "The grid pattern one. Firm enough to matter, light enough to travel with.",
+      "priceRange": "£35",
+      "affiliateUrl": "https://www.amazon.co.uk/s?k=triggerpoint+foam+roller"
+    },
+    {
+      "name": "Theragun Mini",
+      "brand": "Therabody",
+      "category": "recovery",
+      "description": "Handbag-sized percussive therapy. For the IT band after Lagree.",
+      "priceRange": "£175",
+      "affiliateUrl": "https://www.therabody.com/uk/en-gb/theragun-mini.html",
+      "tag": "splurge"
+    },
+
+    {
+      "name": "Hydro Flask 32oz",
+      "brand": "Hydro Flask",
+      "category": "accessories",
+      "description": "Keeps cold for 24 hrs. Big enough you don't have to refill mid-class.",
+      "priceRange": "£40",
+      "affiliateUrl": "https://www.amazon.co.uk/s?k=hydroflask+32oz"
+    },
+    {
+      "name": "Baggu Standard Tote",
+      "brand": "Baggu",
+      "category": "accessories",
+      "description": "Holds your mat, your laptop, your matcha. The It-girl studio bag.",
+      "priceRange": "£16",
+      "affiliateUrl": "https://baggu.com/products/standard-baggu"
+    },
+    {
+      "name": "Stojo Collapsible Cup",
+      "brand": "Stojo",
+      "category": "accessories",
+      "description": "Your flat white after class, no paper cup guilt. Folds flat in your Baggu.",
+      "priceRange": "£15",
+      "affiliateUrl": "https://stojo.co/collections/shop"
+    }
+  ]
+}

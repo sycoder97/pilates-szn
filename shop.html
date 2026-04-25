@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shop — pilates szn</title>
+<meta name="description" content="The activewear, matcha, and recovery gear we actually use. Curated for London pilates girls." />
+<meta name="theme-color" content="#faf7f2" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%98%E2%80%8D%E2%99%80%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">pilates</span><span class="brand-accent">szn</span>
+    </a>
+    <nav class="nav">
+      <a href="/#directory">Directory</a>
+      <a href="/#guides">Guides</a>
+      <a href="/shop" class="active">Shop</a>
+      <a href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero hero-shop">
+  <div class="wrap">
+    <p class="eyebrow">Our shop · curated</p>
+    <h1>The bits that<br/>make it better.</h1>
+    <p class="lede">Activewear, matcha, recovery kit — the stuff we actually use between classes. Curated, never sponsored sludge.</p>
+  </div>
+</section>
+
+<section class="shop">
+  <div class="wrap">
+    <div class="filters">
+      <div class="filter-row filter-chips" role="toolbar" aria-label="Filter products">
+        <div class="chip-group" data-group="category">
+          <span class="chip-label">Shop</span>
+          <button class="chip active" data-value="">Everything</button>
+          <button class="chip" data-value="activewear">Activewear</button>
+          <button class="chip" data-value="essentials">Essentials</button>
+          <button class="chip" data-value="matcha">Matcha & wellness</button>
+          <button class="chip" data-value="recovery">Recovery</button>
+          <button class="chip" data-value="accessories">Accessories</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-grid" class="product-grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap about-inner">
+    <h2 class="section-title">A note on these links</h2>
+    <p>Some of the links on this page are affiliate links. If you buy through them we earn a small commission at no extra cost to you. We only include things we'd actually use or recommend to a friend.</p>
+    <p>Nothing here is paid placement. Editorial choices stay ours.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> pilates szn · London</p>
+    <p><a href="mailto:sieyin1997@gmail.com">Contact</a> · <a href="/#about">About</a></p>
+  </div>
+</footer>
+
+<script src="shop.js"></script>
+</body>
+</html>
