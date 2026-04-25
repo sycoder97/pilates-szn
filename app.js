@@ -139,7 +139,6 @@
       <div class="modal-cta">
         <a class="btn btn-primary" href="${outboundURL(s)}" target="_blank" rel="noopener sponsored">Book at ${esc(s.name)} →</a>
         <a class="btn btn-ghost" href="${esc(s.website)}" target="_blank" rel="noopener">Visit website</a>
-        <button class="btn btn-save" type="button" data-save="${esc(s.name)}" aria-pressed="${shortlistHas(s.name)}">${shortlistLabel(s.name)}</button>
       </div>
       <p class="report-row"><a href="${reportMailto(s)}" class="report-link">Something wrong with this listing? Report it →</a></p>
     `;
@@ -150,24 +149,8 @@
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-  modal.addEventListener('click', e => {
-    if (e.target.dataset.close !== undefined) { closeModal(); return; }
-    const saveBtn = e.target.closest('[data-save]');
-    if (saveBtn) {
-      const name = saveBtn.dataset.save;
-      window.PILATES_SHORTLIST.toggle(name);
-      saveBtn.textContent = shortlistLabel(name);
-      saveBtn.setAttribute('aria-pressed', String(shortlistHas(name)));
-    }
-  });
+  modal.addEventListener('click', e => { if (e.target.dataset.close !== undefined) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal(); });
-
-  function shortlistHas(name) {
-    return !!(window.PILATES_SHORTLIST && window.PILATES_SHORTLIST.has(name));
-  }
-  function shortlistLabel(name) {
-    return shortlistHas(name) ? '✓ Saved' : '+ Save';
-  }
 
   // --- filtering events ---
   document.querySelectorAll('.chip-group').forEach(group => {

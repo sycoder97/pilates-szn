@@ -7,7 +7,8 @@
   "scripts": {
     "refresh": "node scripts/refresh-pricing.mjs",
     "refresh:dry": "node scripts/refresh-pricing.mjs --dry-run",
-    "refresh:one": "node scripts/refresh-pricing.mjs --only"
+    "refresh:one": "node scripts/refresh-pricing.mjs --only",
+    "check-links": "node scripts/check-product-links.mjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0"
