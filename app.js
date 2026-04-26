@@ -157,17 +157,21 @@
 
   function cardVisual(s) {
     const tint = METHOD_TINT[(s.types || [])[0]] || '#E5E3DC';
-    const placeholder = `repeating-linear-gradient(90deg, ${tint} 0 1px, transparent 1px 6px), ${tint}`;
-    if (s.image) {
-      return `
-        <div class="card-visual" style="background: ${placeholder};">
-          <img src="${esc(s.image)}" alt="${esc(s.name)}" loading="lazy" referrerpolicy="no-referrer"
-               onload="if(this.naturalWidth && (this.naturalWidth < 400 || this.naturalWidth/this.naturalHeight < 1.15)) this.classList.add('is-logo')"
-               onerror="this.style.display='none'" />
-        </div>
-      `;
+    if (!s.image) {
+      return `<div class="card-visual card-visual--empty" style="background: ${tint};"></div>`;
     }
-    return `<div class="card-visual" style="background: ${placeholder};"></div>`;
+    // PNG / SVG / ICO are almost always logos or wordmarks. JPG / WEBP / GIF
+    // are almost always photos. Cleaner than guessing from pixel dimensions
+    // because wordmarks can be high-res too.
+    const isLogo = /\.(png|svg|ico)(\?|$)/i.test(s.image);
+    const cls = isLogo ? 'card-visual card-visual--logo' : 'card-visual card-visual--photo';
+    const bg = isLogo ? `background: ${tint};` : '';
+    return `
+      <div class="${cls}" style="${bg}">
+        <img src="${esc(s.image)}" alt="${esc(s.name)}" loading="lazy" referrerpolicy="no-referrer"
+             onerror="this.parentElement.classList.add('card-visual--empty'); this.style.display='none'" />
+      </div>
+    `;
   }
 
   // --- modal ---

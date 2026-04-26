@@ -371,21 +371,32 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   width: 100%;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
+  background: #E5E3DC; /* fallback tint, overridden inline per studio */
 }
 .card-visual img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
 }
-/* Logos / square brand marks centre with no crop, against the method tint.
-   Wide hero photos still cover the full frame. */
-.card-visual img.is-logo {
+/* Photos fill the frame, edge to edge. */
+.card-visual--photo img { object-fit: cover; }
+/* Logos centre against the method tint, capped so favicons don't blow up. */
+.card-visual--logo img {
   object-fit: contain;
-  padding: 18px;
+  padding: 24px;
+  /* Re-anchor to centre when padding is applied — without this, padding
+     pushes the image into the top-left of the absolute box. */
+  inset: 0;
+  margin: auto;
+  max-width: 65%;
+  max-height: 65%;
+  width: auto;
+  height: auto;
 }
+/* Cards with no image at all read as a clean tinted block. */
+.card-visual--empty { /* nothing further — the tint is enough */ }
 .card-body {
   padding: 18px 22px 18px;
   display: flex;
