@@ -371,21 +371,32 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   width: 100%;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
+  background: #E5E3DC; /* fallback tint, overridden inline per studio */
 }
 .card-visual img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
 }
-/* Logos / square brand marks centre with no crop, against the method tint.
-   Wide hero photos still cover the full frame. */
-.card-visual img.is-logo {
+/* Photos fill the frame, edge to edge. */
+.card-visual--photo img { object-fit: cover; }
+/* Logos centre against the method tint, capped so favicons don't blow up. */
+.card-visual--logo img {
   object-fit: contain;
-  padding: 18px;
+  padding: 24px;
+  /* Re-anchor to centre when padding is applied — without this, padding
+     pushes the image into the top-left of the absolute box. */
+  inset: 0;
+  margin: auto;
+  max-width: 65%;
+  max-height: 65%;
+  width: auto;
+  height: auto;
 }
+/* Cards with no image at all read as a clean tinted block. */
+.card-visual--empty { /* nothing further — the tint is enough */ }
 .card-body {
   padding: 18px 22px 18px;
   display: flex;
@@ -452,6 +463,34 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   text-transform: uppercase;
   color: var(--ink-soft);
 }
+.card-actions { display: inline-flex; align-items: center; gap: 6px; }
+.card-compare-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s;
+  white-space: nowrap;
+}
+.card-compare-btn:hover { border-color: var(--ink); }
+.card-compare-btn[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+/* Cards already in the compare set get a subtle border treatment so the
+   selection is scannable across the grid. */
+.card.card--comparing {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
 .book-btn {
   display: inline-flex;
   align-items: center;
@@ -464,6 +503,57 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   text-transform: uppercase;
 }
 .book-btn:hover { background: #000; }
+
+/* --------- sticky compare bar --------- */
+
+.compare-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  background: var(--bg);
+  border-top: 1px solid var(--ink);
+  padding: 14px var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 -1px 0 rgba(17, 17, 16, 0.04);
+}
+.compare-bar[hidden] { display: none; }
+.compare-bar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.compare-bar-headline {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink);
+}
+.compare-bar-headline strong { font-weight: 500; }
+.compare-bar-names {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.compare-bar-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 760px) {
+  .compare-bar { padding: 12px var(--pad); gap: 10px; }
+  .compare-bar-names { display: none; }
+  .compare-bar-actions .text-btn { display: none; }
+}
 
 .empty-state {
   text-align: center;

@@ -98,12 +98,41 @@
     empty.hidden = list.length !== 0;
     grid.innerHTML = list.map(cardHTML).join('');
     grid.querySelectorAll('.card').forEach(el => {
-      el.addEventListener('click', e => {
+      const handle = e => {
         if (e.target.closest('.book-btn')) return; // let book link through
+        const cmp = e.target.closest('[data-card-compare]');
+        if (cmp) {
+          e.stopPropagation();
+          window.PILATES_COMPARE.toggle(cmp.dataset.cardCompare);
+          return;
+        }
         openModal(el.dataset.name);
+      };
+      el.addEventListener('click', handle);
+      el.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handle(e); }
       });
     });
+    paintCompareUI();
   }
+
+  // Update card highlight + per-card button text to reflect the compare set.
+  // The sticky bar and nav badge are handled by compare-store.js.
+  function paintCompareUI() {
+    if (!window.PILATES_COMPARE) return;
+    const set = new Set(window.PILATES_COMPARE.read());
+    grid.querySelectorAll('.card').forEach(card => {
+      const inSet = set.has(card.dataset.name);
+      card.classList.toggle('card--comparing', inSet);
+      const btn = card.querySelector('[data-card-compare]');
+      if (btn) {
+        btn.textContent = inSet ? '✓ Comparing' : '+ Compare';
+        btn.setAttribute('aria-pressed', String(inSet));
+      }
+    });
+  }
+
+  document.addEventListener('compare:change', paintCompareUI);
 
   function filtered() {
     const { zone, type, price, search } = state.filters;
@@ -124,7 +153,7 @@
     const types = (s.types || []).map(t => `<span class="tag tag-type">${esc(t)}</span>`).join('');
     const zoneLabel = { C: 'Central', N: 'North', S: 'South', E: 'East', W: 'West' }[s.zone] || s.zone;
     return `
-      <button class="card" type="button" data-name="${esc(s.name)}" aria-label="View ${esc(s.name)}">
+      <div class="card" data-name="${esc(s.name)}" role="button" tabindex="0" aria-label="View ${esc(s.name)}">
         ${cardVisual(s)}
         <div class="card-body">
           <div class="card-head">
@@ -141,10 +170,13 @@
           </dl>
           <div class="card-foot">
             <span class="verified">Verified ${esc(s.lastVerified || '—')}</span>
-            <a class="book-btn" href="${outboundURL(s)}" target="_blank" rel="noopener sponsored" data-studio="${esc(s.name)}">Book</a>
+            <div class="card-actions">
+              <button class="card-compare-btn" type="button" data-card-compare="${esc(s.name)}" aria-pressed="false">+ Compare</button>
+              <a class="book-btn" href="${outboundURL(s)}" target="_blank" rel="noopener sponsored" data-studio="${esc(s.name)}">Book</a>
+            </div>
           </div>
         </div>
-      </button>
+      </div>
     `;
   }
 
@@ -157,17 +189,21 @@
 
   function cardVisual(s) {
     const tint = METHOD_TINT[(s.types || [])[0]] || '#E5E3DC';
-    const placeholder = `repeating-linear-gradient(90deg, ${tint} 0 1px, transparent 1px 6px), ${tint}`;
-    if (s.image) {
-      return `
-        <div class="card-visual" style="background: ${placeholder};">
-          <img src="${esc(s.image)}" alt="${esc(s.name)}" loading="lazy" referrerpolicy="no-referrer"
-               onload="if(this.naturalWidth && (this.naturalWidth < 400 || this.naturalWidth/this.naturalHeight < 1.15)) this.classList.add('is-logo')"
-               onerror="this.style.display='none'" />
-        </div>
-      `;
+    if (!s.image) {
+      return `<div class="card-visual card-visual--empty" style="background: ${tint};"></div>`;
     }
-    return `<div class="card-visual" style="background: ${placeholder};"></div>`;
+    // PNG / SVG / ICO are almost always logos or wordmarks. JPG / WEBP / GIF
+    // are almost always photos. Cleaner than guessing from pixel dimensions
+    // because wordmarks can be high-res too.
+    const isLogo = /\.(png|svg|ico)(\?|$)/i.test(s.image);
+    const cls = isLogo ? 'card-visual card-visual--logo' : 'card-visual card-visual--photo';
+    const bg = isLogo ? `background: ${tint};` : '';
+    return `
+      <div class="${cls}" style="${bg}">
+        <img src="${esc(s.image)}" alt="${esc(s.name)}" loading="lazy" referrerpolicy="no-referrer"
+             onerror="this.parentElement.classList.add('card-visual--empty'); this.style.display='none'" />
+      </div>
+    `;
   }
 
   // --- modal ---
