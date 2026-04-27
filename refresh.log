@@ -1,18 +1,18 @@
 {
-  "ranAt": "2026-04-22T21:02:48.450Z",
+  "ranAt": "2026-04-27T10:24:43.023Z",
   "results": [
     {
       "studio": "Heartcore",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing found on Heartcore's Mindbody listing for London. Drop-in price of £27 for Coreformer was also mentioned in a February 2024 blog, but Mindbody is a direct booking platform and likely more current. No unlimited monthly option found for London.",
+      "notes": "Intro offer for Hot Mat classes found on Heartcore's Mindbody booking page and confirmed by Heartcore Battersea Power Station page. Exact drop-in price of £30 and specific package prices (5 for £140, 10 for £250, Unlimited £220/mo) were not found. Coreformer drop-in is £35 and Hot Mat drop-in is £25. Coreformer packages are 5 for £165 and 10 for £300. Monthly rolling contracts for 10 classes (£237) and 14 classes (£310) were found.",
       "changed": true,
       "before": {
-        "intro": "3 for £45",
-        "packages": "5 for £140 · 10 for £250"
+        "intro": "3 for £45 (Hot Mat) or 3 for £55 (Coreformer)",
+        "packages": "Drop-in £35 (Coreformer) or £25 (Hot Mat) · 5 Coreformer for £165 · 10 Coreformer for £300 · 5 Hot Mat for £120 · 10 Hot Mat for £210"
       },
       "after": {
-        "intro": "3 for £45 (Hot Mat) or 3 for £55 (Coreformer)",
+        "intro": "3 for £45",
         "packages": "Drop-in £35 (Coreformer) or £25 (Hot Mat) · 5 Coreformer for £165 · 10 Coreformer for £300 · 5 Hot Mat for £120 · 10 Hot Mat for £210"
       }
     },
@@ -20,7 +20,7 @@
       "studio": "Ten Health & Fitness",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for classes and packages is not directly visible on this page. Links lead to specific service pages or booking/account sections.",
+      "notes": "Pricing details are not explicitly listed on the homepage. The intro offer is visible, but package and drop-in prices are not directly stated and likely require navigating to a booking or pricing page.",
       "changed": false,
       "before": {
         "intro": "3 for £57",
@@ -35,7 +35,7 @@
       "studio": "FRAME",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing is not explicitly listed for drop-in or packages. The intro offer is prominently displayed.",
+      "notes": "Pricing is not explicitly listed for drop-in or packages. The intro offer is prominent. Further pricing details might be behind booking or membership sections not fully rendered in the HTML.",
       "changed": false,
       "before": {
         "intro": "3 for £40",
@@ -49,12 +49,12 @@
     {
       "studio": "1Rebel",
       "status": "ok",
-      "confidence": 0.9,
-      "notes": "Prices obtained from 1Rebel's official website (buy sessions and new to 1Rebel pages) and The Fit Guide reviews for specific locations.",
-      "changed": true,
+      "confidence": 0.1,
+      "notes": "Pricing is not visible on this page, which appears to be a location selector.",
+      "changed": false,
       "before": {
-        "intro": "3 for £45",
-        "packages": "From £38/mo membership"
+        "intro": "3 for £49",
+        "packages": "Drop-in £26 · 5 for £140 · 10 for £250 · Unlimited £220/mo"
       },
       "after": {
         "intro": "3 for £49",
@@ -80,7 +80,7 @@
       "studio": "Tempo 301",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing is presented as an introductory offer. No clear drop-in or package prices are visible.",
+      "notes": "Pricing for intro offer is displayed prominently in a slider. No other group class pricing is visible.",
       "changed": false,
       "before": {
         "intro": "1ST 3 CLASSES £48.00",
@@ -95,7 +95,7 @@
       "studio": "Psycle",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for intro offers is visible, but other pricing is behind booking widget.",
+      "notes": "Pricing for group classes is not explicitly listed, but introductory offers are available. Prices may be behind booking widget.",
       "changed": false,
       "before": {
         "intro": "3 classes for £50",
@@ -110,7 +110,7 @@
       "studio": "Reformcore",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing details are not explicitly listed for single classes or packages on this page. The intro offers are clearly visible.",
+      "notes": "Pricing details are not explicitly listed for single classes or packages on this page. The intro offers are for a cross-brand membership.",
       "changed": false,
       "before": {
         "intro": "3 Classes for £49",
@@ -125,14 +125,14 @@
       "studio": "KARVE Club",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing found on KARVE Club's Kensington and Chelsea pricing pages, dated August 15, 2024. The Chelsea location also shows discounted monthly memberships: Unlimited £340/mo, 8 classes £220/mo, 4 classes £115/mo. A single drop-in session is £36. An intro offer of 'KARVE INTRO 3 PACK' for £80.00 is also listed.",
+      "notes": "Pricing found on karve.club 'Buy Class Packs' page (dated August 15, 2024) and Momence booking system. Notting Hill studio is 'Coming Soon Summer 2025', so pricing is for existing Kensington, Chelsea, and Victoria studios.",
       "changed": true,
       "before": {
         "intro": "2 for £50",
-        "packages": "4 classes £135/mo · Unlimited £400/mo"
+        "packages": "Drop-in £36 · 5 for £170 · 10 for £320 · Unlimited £400/mo"
       },
       "after": {
-        "intro": "2 for £50",
+        "intro": "3 for £80",
         "packages": "Drop-in £36 · 5 for £170 · 10 for £320 · Unlimited £400/mo"
       }
     },
@@ -154,8 +154,8 @@
     {
       "studio": "Nobu Pilates",
       "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing is not explicitly listed. The page mentions booking via the Mindbody app and provides links to download it. There is a \"Recondition With Nobu Pilates & Fitness\" offer that includes a one-month membership and ten group classes for an unspecified price.",
+      "confidence": 0.8,
+      "notes": "Pricing is not explicitly listed on the page. The page mentions downloading the Mindbody app to manage packages, suggesting pricing might be handled through that platform or a booking widget not present in the HTML.",
       "changed": false,
       "before": {
         "intro": "Taster from £35",
@@ -169,8 +169,8 @@
     {
       "studio": "Bodyism",
       "status": "ok",
-      "confidence": 0.7,
-      "notes": "Bodyism is a members-only studio. Membership starts at £130/month and includes unlimited access to classes, including Pilates. No specific 'intro offer', 'drop-in', or 'packages' for Pilates classes are publicly advertised for non-members. Information is based on recent articles (May 2024) and the Bodyism website.",
+      "confidence": 0.1,
+      "notes": "Pricing information is not directly visible on this page. The page focuses on corporate wellness, partnerships, and general class concepts rather than specific pricing for group reformer or mat pilates.",
       "changed": false,
       "before": {
         "intro": "Trial day from £50",
@@ -184,7 +184,7 @@
     {
       "studio": "Core Flex Pilates",
       "status": "ok",
-      "confidence": 0.8,
+      "confidence": 0.1,
       "notes": "Pricing information is not directly visible in the HTML. The 'Buy' link suggests pricing is available elsewhere.",
       "changed": false,
       "before": {
@@ -200,26 +200,26 @@
       "studio": "Avalon Pilates",
       "status": "ok",
       "confidence": 1,
-      "notes": "Pricing for group reformer classes found on Avalon Pilates' official website and Momence booking widget. The 'intro_offer' is the 'All Access Trial Pack' for 4 classes. The 'drop_in' price is for a single group class. 'Packages' include a 4-class pack for £120, an 8-class pack for £232, and a 'Clapham Monthly Membership - SILVER' for 10 classes a month at £225. An 'unlimited' monthly option was not found.",
+      "notes": "Pricing found on avalonpilates.com/pricing. The introductory offer '3 for £45' was not found; the closest available is 'All Access Trial Pack - 4 classes for £61.05'. No 'Unlimited £220/mo' package was found, but monthly memberships are available, such as 'Silver · 10 Classes per month · £228.40'.",
       "changed": true,
       "before": {
-        "intro": "4 for £61",
-        "packages": "Class packs from ~£22/class"
+        "intro": "4 for £60",
+        "packages": "Drop-in £35 · 4 for £120 · 8 for £232 · 10 for £225/mo"
       },
       "after": {
         "intro": "4 for £60",
-        "packages": "Drop-in £35 · 4 for £120 · 8 for £232 · 10 for £225/mo"
+        "packages": "Drop-in £35 · 4 for £120 · 8 for £232 · 12 for £336 · 20 for £500 · 40 for £920"
       }
     },
     {
       "studio": "Studio Anatomy",
       "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing found on Studio Anatomy's Momence booking page. Monthly memberships include Reformer Pilates, Functional Fitness, and Infrared Sauna. A 5-pack is also available for £125 (expires in 2 months) and a 20-pack for £296 (expires in 5 months, Islington studio only).",
-      "changed": true,
+      "confidence": 0.1,
+      "notes": "Pricing information is not present in the provided HTML. It is likely behind a booking widget or on a separate page.",
+      "changed": false,
       "before": {
-        "intro": "1 free + 3 for £55",
-        "packages": "Class packs from ~£25/class"
+        "intro": "3 for £55",
+        "packages": "Drop-in £28 · 5 sessions/month for £95 · 10 sessions/month for £170 · 16 sessions/month for £256"
       },
       "after": {
         "intro": "3 for £55",
@@ -230,22 +230,22 @@
       "studio": "Blok",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing is presented per location (e.g. Clapton), but the general pricing structure is visible.",
-      "changed": false,
+      "notes": "Pricing is presented per location (e.g. Clapton), and the general pricing structure is shown. Specific drop-in rates are not explicitly listed.",
+      "changed": true,
       "before": {
         "intro": "10 for £75 (first month)",
         "packages": "£95 for first month · Class Packs from £22 · Memberships from £83/per month"
       },
       "after": {
         "intro": "10 for £75 (first month)",
-        "packages": "£95 for first month · Class Packs from £22 · Memberships from £83/per month"
+        "packages": "£95 for 90 days · Class Packs from £22 · Memberships from £83/mo"
       }
     },
     {
       "studio": "Blanc Space",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing information is not directly visible on this page. Links to 'Classes' and 'Memberships & Packs' suggest pricing is available elsewhere.",
+      "notes": "Pricing information is not directly visible on this page. It is likely behind a booking or membership portal.",
       "changed": false,
       "before": {
         "intro": "3 for £55",
@@ -260,7 +260,7 @@
       "studio": "PBB Studio",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing information is not directly visible on the homepage. The 'Book a Class' link leads to a page that likely contains pricing, but it's not inline on this HTML.",
+      "notes": "Pricing information is not directly visible on the homepage. The 'Book a Class' link leads to a page that likely contains pricing, but it's not inline HTML.",
       "changed": false,
       "before": {
         "intro": "3 for £60",
@@ -274,23 +274,23 @@
     {
       "studio": "Bootcamp Pilates",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing primarily from Bootcamp Pilates official website (general pricing page and Richmond specific page). The 'New Customer Trial' and 'Single Class Visit' are from the Richmond-specific pricing page. Class packages are compiled from both the general pricing page and the Richmond-specific page. An 'Unlimited' monthly option was found for £60.00 on the Richmond-specific page, but due to significant discrepancies with other package pricing and a lack of further corroboration for a current, truly unlimited offer, it has not been included. A dated 'August Unlimited' offer for £199 was also found.",
+      "confidence": 1,
+      "notes": "Pricing found on thepilatessphere.co.uk, which is the rebranded Bootcamp Pilates Richmond. The 'Unlimited' package is billed weekly at £69.",
       "changed": true,
       "before": {
-        "intro": "First class £25",
-        "packages": "5 for £160 · £35 single"
-      },
-      "after": {
         "intro": "New Customer Trial £59.00 - Valid for 2 weeks",
         "packages": "Drop-in £18.00 · 4 for £49.00 · 5 for £95.00 · 8 for £99.00 · 10 for £180.00"
+      },
+      "after": {
+        "intro": "3 classes for £55",
+        "packages": "Drop-in £35 · 10 Sessions £300 · Unlimited £69/week"
       }
     },
     {
       "studio": "Flowing Body",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for classes and memberships is not directly visible on this page and likely requires navigating to the 'Pricing' or 'Memberships' pages, or through the booking widget.",
+      "notes": "Pricing for classes and memberships is not directly visible in the HTML and likely requires navigating to the 'Prices' or 'Memberships' pages, or using the booking widget.",
       "changed": false,
       "before": {
         "intro": "First 3 classes for £49",
@@ -304,8 +304,8 @@
     {
       "studio": "Flow Ldn",
       "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing details are not explicitly listed on this page. The 'buy pack here' and 'buy a membership' buttons link to a pricing page which is not provided in the HTML.",
+      "confidence": 0.8,
+      "notes": "Pricing is linked to a booking widget ('buy pack here' button links to '/reserve#/pricing/site/1').",
       "changed": false,
       "before": {
         "intro": "3 classes for £40",
@@ -320,10 +320,10 @@
       "studio": "East of Eden",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing details are not explicitly listed for drop-in or standard packages on this page. The intro offers are clearly visible.",
-      "changed": true,
+      "notes": "Pricing details are not explicitly listed for single classes or packages on this page. The intro offers are visible.",
+      "changed": false,
       "before": {
-        "intro": "Up to 4 classes at Hoe Street for £30",
+        "intro": "Strength Intro: Up to 4 classes at Hoe Street for £30 · Both Studios Intro: 50 credits across all classes for £50",
         "packages": "£14 single · Packs from £12/class"
       },
       "after": {
@@ -335,14 +335,14 @@
       "studio": "First Reform",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing is advertised as a welcome offer, but specific class pack or membership prices are not detailed in the HTML. Booking is handled via Momence.",
-      "changed": false,
+      "notes": "Pricing is linked to a booking widget (Momence) and not directly visible in the HTML. The intro offer is advertised, but specific package prices are not.",
+      "changed": true,
       "before": {
         "intro": "Take your first class with us for £12",
         "packages": "£24/session, pack discounts"
       },
       "after": {
-        "intro": "Take your first class with us for £12",
+        "intro": "Take your first class with us for £12 + 25% off all first packs purchased code: FIRSTPACK",
         "packages": "£24/session, pack discounts"
       }
     },
@@ -364,15 +364,15 @@
     {
       "studio": "Core Pilates Studios",
       "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing for group classes is not explicitly listed on this page. The intro offer links to a booking platform (Momence).",
-      "changed": false,
+      "confidence": 0.8,
+      "notes": "Pricing for drop-in and packages is not explicitly listed on this page. The new client offer links to Momence, and other pricing pages are linked via the navigation.",
+      "changed": true,
       "before": {
         "intro": "2 Classes for £35",
         "packages": "Group & private from £40"
       },
       "after": {
-        "intro": "2 Classes for £35",
+        "intro": "New Client Offer – 2 Classes for £35",
         "packages": "Group & private from £40"
       }
     },
@@ -380,7 +380,7 @@
       "studio": "Club Pilates",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing details are not explicitly listed on the homepage. The 'First Class Free' offer is prominent, but other pricing requires further investigation.",
+      "notes": "Pricing details are not explicitly listed on the page. The 'First Class Free' offer is prominent, but other pricing is likely behind a booking system or specific studio pages.",
       "changed": false,
       "before": {
         "intro": "First Class Free",
@@ -394,12 +394,12 @@
     {
       "studio": "FÔLD Reformer",
       "status": "ok",
-      "confidence": 0.7,
-      "notes": "Drop-in price and 'first class free' intro offer found for FÔLD HQ (Studio 217, Buspace Studios, Conlan Street, London W10 5AP) from a December 2025 article. Specific '3 for £45' intro offer and package prices (5, 10, unlimited) were not found for FÔLD Reformer's own studio classes. The website primarily focuses on selling reformer machines and app memberships, with the London location appearing to be a showroom offering 'community classes' or 'bonus classes'.",
-      "changed": true,
+      "confidence": 0,
+      "notes": "This page is for a product (reformer machine), not a studio offering classes. Pricing for classes is not visible.",
+      "changed": false,
       "before": {
-        "intro": "From £10/class",
-        "packages": "Pay as you go from £10"
+        "intro": "First class free",
+        "packages": "Drop-in £10"
       },
       "after": {
         "intro": "First class free",
@@ -409,11 +409,11 @@
     {
       "studio": "Reformer Collective",
       "status": "ok",
-      "confidence": 0.5,
-      "notes": "Intro offer found on Reformer Collective's 'First Timers' page. Drop-in and package prices were not explicitly found in search snippets for reformercollective.co.uk and would likely require navigating their booking system.",
-      "changed": true,
+      "confidence": 0.9,
+      "notes": "Pricing information for Reformer Collective was found on their official website (reformercollective.co.uk) under 'Reformer Pilates Packages' and 'First Timers' pages. The introductory offer found was 'Try us for £10', not '3 for £45'. No explicit single 'drop-in' price of '£30' was found. Package structures and prices found were different from the requested format (e.g., Class Packs: 4 for £80, 8 for £150, 12 for £210; Memberships: 4 classes/month for £75, 8 classes/month for £135, 12 classes/month for £180, 16 classes/month for £215).",
+      "changed": false,
       "before": {
-        "intro": "3 for £55",
+        "intro": "Try us for £10",
         "packages": "Packs from ~£22/class"
       },
       "after": {
@@ -424,8 +424,8 @@
     {
       "studio": "Casa Core",
       "status": "ok",
-      "confidence": 0.5,
-      "notes": "Pricing information is not directly visible in the HTML. The page links to '/prices' and '/schedule' which likely contain pricing, but the details are not present in this source. There is an embedded Momence plugin for reviews, which might indicate booking/pricing is handled through that platform.",
+      "confidence": 0.8,
+      "notes": "Pricing information is not directly visible in the HTML. The page links to '/prices' and '/schedule' which likely contain pricing details, but these are not rendered here.",
       "changed": false,
       "before": {
         "intro": "Intro 3-pack £55",
@@ -439,8 +439,8 @@
     {
       "studio": "Scandi Pilates",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not directly visible on the homepage. The site focuses on online classes and personal training descriptions. A link to 'Pricing Packages' is available in the navigation, but the content of that page is not provided.",
+      "confidence": 0.9,
+      "notes": "Pricing information is not directly visible in the HTML. The page focuses on class descriptions and testimonials. There is a link to 'Pricing Packages' but the content of that page is not provided.",
       "changed": false,
       "before": {
         "intro": "3 for £50",
@@ -455,7 +455,7 @@
       "studio": "FS8",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing information is not directly visible on the page. It is likely behind a booking widget or requires selecting a specific studio.",
+      "notes": "Pricing information is not directly visible on this page. It is likely behind a booking or membership portal.",
       "changed": false,
       "before": {
         "intro": "Trial class £20",
@@ -469,12 +469,12 @@
     {
       "studio": "Hypecore",
       "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing obtained directly from Hypecore's 'Our Price' page on their official website.",
-      "changed": true,
+      "confidence": 0.2,
+      "notes": "Pricing information is not directly visible in the HTML. The page links to booking/schedule pages and mentions 'clear pricing' but does not display specific prices.",
+      "changed": false,
       "before": {
-        "intro": "1:4 group from £29",
-        "packages": "Memberships from 6 for £168"
+        "intro": "3 Trial Sessions for £59",
+        "packages": "Drop-in £29 · 6 Sessions for £168 · 10 Sessions for £255 · 16 Sessions for £360"
       },
       "after": {
         "intro": "3 Trial Sessions for £59",
@@ -485,7 +485,7 @@
       "studio": "Reformer LDN",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing is not explicitly listed on this page. The 'Buy' link in the navigation likely leads to pricing information.",
+      "notes": "Pricing is not directly visible on this page. The 'Buy' link in the navigation likely leads to pricing information.",
       "changed": false,
       "before": {
         "intro": "3 for £48 (+ free socks)",
@@ -499,8 +499,8 @@
     {
       "studio": "LOAD",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing is not explicitly listed, but introductory offers are visible. Further pricing details are likely behind the 'buy sessions' or 'my account' links which lead to external booking platforms.",
+      "confidence": 0.9,
+      "notes": "Pricing is not explicitly listed for drop-in or packages. The intro offer is prominent. Other offers are likely behind the 'buy sessions' or 'my account' links which lead to a Mindbody login/booking page.",
       "changed": false,
       "before": {
         "intro": "1 session £15 or 2 weeks unlimited pack for £100",
@@ -514,8 +514,8 @@
     {
       "studio": "Truform",
       "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing information is not directly visible on the page. The 'BOOK NOW' button links to a booking system.",
+      "confidence": 0.8,
+      "notes": "Pricing information is not directly visible on the page. The 'BOOK NOW' button likely leads to a booking system where prices would be found.",
       "changed": false,
       "before": {
         "intro": "3 for £49",
@@ -530,11 +530,11 @@
       "studio": "MAD Lagree",
       "status": "ok",
       "confidence": 0.7,
-      "notes": "Intro offer from Fresh Fitness Food review (Jan 28, 2025). Drop-in price from The Daily Move review (Sep 18, 2024). Could not find comprehensive package details for group classes directly on letsgomad.com from search snippets.",
-      "changed": true,
+      "notes": "Intro offer from Fresh Fitness Food review (January 2025). Drop-in price from The Daily Move review (September 2024). Could not find specific class package details on the studio's website or other reliable sources through Google Search snippets.",
+      "changed": false,
       "before": {
-        "intro": "First class £30",
-        "packages": "10 for £280 · 20 for £500"
+        "intro": "3 for £70",
+        "packages": "Drop-in £35"
       },
       "after": {
         "intro": "3 for £70",
@@ -544,27 +544,27 @@
     {
       "studio": "Oncore",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing details are primarily found on a separate pricing page, indicated by navigation links. The intro offer is clearly visible on the homepage.",
-      "changed": false,
+      "confidence": 0.9,
+      "notes": "Pricing details are behind a 'Buy Classes' link, not directly visible on this page.",
+      "changed": true,
       "before": {
         "intro": "3 for £39",
         "packages": "Memberships from £99/mo"
       },
       "after": {
-        "intro": "3 for £39",
+        "intro": "Try ANY 3 classes and see what you think £39",
         "packages": "Memberships from £99/mo"
       }
     },
     {
       "studio": "Pilates Squared",
       "status": "ok",
-      "confidence": 0.6,
-      "notes": "Drop-in price of £30 is based on a Groupon promotional offer for one 60-minute Reformer Bed Pilates class. The original price was £42. The studio's own website primarily lists pricing for private and duet sessions, not group classes in the requested format. No intro offer of '3 for £45' or packages like '5 for £140 · 10 for £250 · Unlimited £220/mo' for group classes were found.",
-      "changed": true,
+      "confidence": 0.1,
+      "notes": "Pricing information is not present in the provided HTML. The page appears to be a template or loading screen.",
+      "changed": false,
       "before": {
         "intro": "Intro session £75",
-        "packages": "Private/semi-private. Max 3."
+        "packages": "Drop-in £30"
       },
       "after": {
         "intro": "Intro session £75",
@@ -575,7 +575,7 @@
       "studio": "Kovaa Studio",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing information is not directly visible in the HTML. The page links to a 'Memberships & Pricing' page, which would likely contain the pricing details.",
+      "notes": "Pricing information is not directly visible on this page. The 'Memberships & Pricing' link in the navigation suggests pricing details are on a separate page.",
       "changed": false,
       "before": {
         "intro": "Intro pack from £30",
@@ -590,7 +590,7 @@
       "studio": "Plum Pilates",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Drop-in price not explicitly listed, but intro offer implies a per-class rate.",
+      "notes": "Drop-in price not explicitly stated, likely included in intro offer or packages.",
       "changed": false,
       "before": {
         "intro": "3 for £45",
@@ -606,13 +606,13 @@
       "status": "ok",
       "confidence": 0.9,
       "notes": "Pricing for packages and drop-in classes is not explicitly listed on this page.",
-      "changed": false,
+      "changed": true,
       "before": {
         "intro": "2 for £35",
         "packages": "Packs from ~£20/class"
       },
       "after": {
-        "intro": "2 for £35",
+        "intro": "2 sessions for £35",
         "packages": "Packs from ~£20/class"
       }
     },
@@ -620,7 +620,7 @@
       "studio": "Exhale Pilates",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing is not directly visible on this page. Links to 'Pricing' and 'Intro Offers' are present, but the actual prices are not displayed inline. The intro offer is mentioned in a banner but links to a separate page for details.",
+      "notes": "Pricing information is not directly visible in the HTML. The intro offer is advertised, but specific class pack or drop-in prices are not listed. Navigation suggests a 'Pricing' page exists, but its content is not in this HTML.",
       "changed": false,
       "before": {
         "intro": "New to Exhale? Get started with one of our Intro Offers here",
@@ -635,22 +635,22 @@
       "studio": "Kinetic Pilates",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Prices are for packages, not drop-in classes. The page mentions two studios: Kinetic Pilates North and Kinetic Pilates City, with different pricing listed for each.",
-      "changed": false,
+      "notes": "Prices are for a 25-day challenge, with a note that they are for new clients only. The prices listed are discounted from a 'regular price'.",
+      "changed": true,
       "before": {
         "intro": "10 group classes £150",
         "packages": "10 Group Equipment Classes* £150 (regular price £360) · 10 Privates Sessions* £500 (regular price £750)"
       },
       "after": {
         "intro": "10 group classes £150",
-        "packages": "10 Group Equipment Classes* £150 (regular price £360) · 10 Privates Sessions* £500 (regular price £750)"
+        "packages": "10 Group Equipment Classes* £150 · 10 Privates Sessions* £500"
       }
     },
     {
       "studio": "Curve Pilates",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for classes is not explicitly listed, only an intro offer and links to book classes.",
+      "notes": "Pricing for packages and drop-in classes is not explicitly listed on this page. The intro offer is prominently displayed.",
       "changed": false,
       "before": {
         "intro": "3 for £55",
@@ -663,31 +663,22 @@
     },
     {
       "studio": "Reform & Vibes",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing details are not explicitly listed for drop-in or packages on this page. The intro offer is prominently displayed.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £49",
-        "packages": "Packs from ~£22/class"
-      },
-      "after": {
-        "intro": "3 for £49",
-        "packages": "Packs from ~£22/class"
-      }
+      "status": "extract-failed",
+      "error": "parse failed: Unexpected token 'h', \"thought{\n  \"... is not valid JSON",
+      "raw": "thought{\n  \"wrong_studio\": false,\n  \"intro_offer\": \"3 classes for £49\",\n  \"drop_in\": null,\n  \"packages\": null,\n  \"confidence\": 1,\n  \"notes\": \"Pricing details are not explicitly listed on the page, but an intro offer is visible. The booking link likely leads to pricing.\"\n}"
     },
     {
       "studio": "Strong & Bendy",
       "status": "ok",
       "confidence": 0.9,
       "notes": "Pricing details are linked to separate pages like 'new-customer-offer', 'reformer-pilates-prices', and 'membership'.",
-      "changed": false,
+      "changed": true,
       "before": {
         "intro": "3 classes JUST £45",
         "packages": "Juicy/Spicy/Chilled reformer from ~£22"
       },
       "after": {
-        "intro": "3 classes JUST £45",
+        "intro": "3 for £45",
         "packages": "Juicy/Spicy/Chilled reformer from ~£22"
       }
     },
@@ -698,19 +689,19 @@
       "notes": "Pricing information is not directly visible in the HTML and appears to be handled by external widgets (bsport-widget-intro, bsport-widget-membership, bsport-widget-packages).",
       "changed": false,
       "before": {
-        "intro": "Intro sessions from £30",
-        "packages": "Packs from ~£25/class"
+        "intro": "3 for £57",
+        "packages": "From £30/class in pack"
       },
       "after": {
-        "intro": "Intro sessions from £30",
-        "packages": "Packs from ~£25/class"
+        "intro": "3 for £57",
+        "packages": "From £30/class in pack"
       }
     },
     {
       "studio": "Freedom Clinics",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing is not explicitly listed on the page. Links to book sessions are present, but no specific prices for group classes are visible.",
+      "notes": "Pricing information is not directly visible in the HTML. The page mentions booking options and a patient-exclusive offer for 10 classes at £150, but no standard drop-in or package prices are listed.",
       "changed": false,
       "before": {
         "intro": "Intro class from £30",
@@ -725,22 +716,22 @@
       "studio": "Milo & The Bull",
       "status": "ok",
       "confidence": 1,
-      "notes": "Pricing found on miloandthebull.com Reformer Pricing page.",
+      "notes": "Pricing for Reformer Pilates found on miloandthebull.com (Reformer Pricing page) and their Mindbody booking widget. The 'Unlimited' package refers to the 'No Contract- 1 Month Unlimited Classes' listed under Reformer Events on Mindbody. The Fit Guide also confirms these prices.",
       "changed": true,
       "before": {
-        "intro": "First 2 for £25",
-        "packages": "Packs from ~£20/class"
+        "intro": "2 for £25",
+        "packages": "Drop-in £28 · 5 for £130 · 10 for £220 · 12 classes/month for £200"
       },
       "after": {
         "intro": "2 for £25",
-        "packages": "Drop-in £28 · 5 for £130 · 10 for £220 · 12 classes/month for £200"
+        "packages": "Drop-in £28 · 5 for £130 · 10 for £220 · Unlimited £220/mo"
       }
     },
     {
       "studio": "Pause Studio",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing details are likely on the /pricing page, which is linked in the navigation.",
+      "notes": "Pricing details are not explicitly listed on this page. The intro offer is visible, but class pack or drop-in prices are not. The site links to 'pricing' and 'book a class' which likely contain this information, but it's not directly in the HTML of this page.",
       "changed": false,
       "before": {
         "intro": "3 Classes for £49",
@@ -755,26 +746,26 @@
       "studio": "Complete Pilates",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for group classes is not explicitly listed, but the new client offer is detailed. The website links to booking widgets for specific class types.",
-      "changed": false,
+      "notes": "Pricing for classes is not explicitly listed, but the new client offer is mentioned. Further pricing details may be behind booking widgets.",
+      "changed": true,
       "before": {
         "intro": "two 55-minute 1:1 sessions for £156",
         "packages": "5 for £125 · 10 for £200"
       },
       "after": {
-        "intro": "two 55-minute 1:1 sessions for £156",
+        "intro": "2 for £156",
         "packages": "5 for £125 · 10 for £200"
       }
     },
     {
       "studio": "Strong Pilates",
       "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing found on strongpilates.co.uk for Islington, Wimbledon, and Warren Street locations. Unlimited membership pricing is from the Birmingham studio page on strongpilates.co.uk. A Women's Health review from January 2024 also mentioned an intro offer of 10-day 5 classes for £49 and a 6-month unlimited package for £58/week (approx. £232/month).",
-      "changed": true,
+      "confidence": 0.1,
+      "notes": "Pricing is not visible on this page. Users are directed to 'FIND & BOOK' or to download the app.",
+      "changed": false,
       "before": {
-        "intro": "10-day unlimited £49",
-        "packages": "5 for £95 · Memberships via app"
+        "intro": "7 classes for £49",
+        "packages": "Drop-in £22.00 · 5 Class Pack for £100 · 10 Class Pack for £198 · Unlimited £229/mo (3-month commitment)"
       },
       "after": {
         "intro": "7 classes for £49",
@@ -784,8 +775,8 @@
     {
       "studio": "BST Lagree",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not directly visible in the HTML. The site links to a booking page for class schedules and pricing.",
+      "confidence": 0.9,
+      "notes": "Pricing information is not directly visible in the HTML. The 'Prices' link in the navigation suggests pricing is available elsewhere.",
       "changed": false,
       "before": {
         "intro": "3 for £59",
@@ -800,7 +791,7 @@
       "studio": "FORM Studios",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing is not directly visible on this page. Booking links lead to Mindbody widgets.",
+      "notes": "Pricing is not directly visible in the HTML. Booking links lead to Mindbody widgets which may contain pricing.",
       "changed": false,
       "before": {
         "intro": "Lagree 3 for £70",
@@ -815,7 +806,7 @@
       "studio": "Barrecore",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for 'Common Bond Intro Pass' is mentioned, but not for standard drop-in classes. The 'Studio Pass' is presented as a membership.",
+      "notes": "Pricing for 'Common Bond Intro Pass' mentioned, but not for standard drop-in classes. Membership pricing is clearly stated.",
       "changed": false,
       "before": {
         "intro": "3 Classes for £49",
@@ -829,12 +820,12 @@
     {
       "studio": "Refine Pilates",
       "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing found on Refine Pilates London website (refinepilates.co.uk)",
-      "changed": true,
+      "confidence": 0.1,
+      "notes": "Pricing information is not directly visible in the HTML. The navigation links to /pricing/ but the content of the page does not contain pricing details.",
+      "changed": false,
       "before": {
-        "intro": "Intro pack via Momence",
-        "packages": "7 reformers · Max 7/class · Packs available"
+        "intro": "3 for £45",
+        "packages": "Drop-in £30 · Block of 4 Classes £110 · Block of 6 Classes £165 · Block of 10 Classes £200 · Monthly Membership: 4 Sessions £100/mo · 6 Sessions £150/mo · 8 Sessions £180/mo"
       },
       "after": {
         "intro": "3 for £45",
@@ -844,8 +835,8 @@
     {
       "studio": "Restart Reformer",
       "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing for packages and drop-in classes is not explicitly listed on this page. The 'Buy' link leads to a page where pricing is likely available.",
+      "confidence": 0.9,
+      "notes": "Pricing for packages and drop-in classes is not explicitly listed on this page. The 'Buy' link likely leads to pricing.",
       "changed": false,
       "before": {
         "intro": "£45 FOR 3 CLASSES",
@@ -860,7 +851,7 @@
       "studio": "Chapel Studio Pilates",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for class blocks is listed, but no clear drop-in rate is advertised. Introduction offer is for a 5-class pack.",
+      "notes": "Pricing for class blocks is listed, but drop-in rates are not explicitly stated. Introduction offer details are present.",
       "changed": false,
       "before": {
         "intro": "5 Classes 2 weeks £45",
