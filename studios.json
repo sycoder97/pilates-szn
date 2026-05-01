@@ -878,7 +878,214 @@
       "website": "https://www.chapelstudiopilates.co.uk",
       "lastVerified": "2026-04-27",
       "image": "https://cdn.prod.website-files.com/688a18c9d5f0ac4389a047b9/68caead3a0b9a9bec2543d44_CS%20Open%20Graph.jpg"
+    },
+    {
+      "name": "The Pilates Studio",
+      "zone": "S",
+      "areas": "Battersea Park",
+      "types": [
+        "Reformer",
+        "Classical"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://thepilatesstudio.london/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Nouva Pilates",
+      "zone": "W",
+      "areas": "Chelsea",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": "Class packs and memberships available. See 'BUY CLASS PACKS' and 'BUY MEMBERSHIP' buttons for details.",
+      "website": "https://nouvapilates.com/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Aligné Studio",
+      "zone": "C",
+      "areas": "Great Portland Street",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": "3 for £50",
+      "packages": "Single Class £35, 5 Class Pack £165, 10 Class Pack £320, Monthly Unlimited £390/month. Private sessions also available.",
+      "website": "https://alignestudio.co.uk/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Sloane Space",
+      "zone": "S",
+      "areas": "London Bridge",
+      "types": [
+        "Lagree"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://sloanepace.com/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Elevate Pilates London",
+      "zone": "N",
+      "areas": "St John's Wood",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": "3 for £60",
+      "packages": "Drop-in £35 · Intro Package: 1 private session + 1 group class for £100, Pack of 10 Classes: £350, Single Private Session: £120, Pack of 10 Sessions: £1080",
+      "website": "https://elevatepilateslondon.com/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Simply Pilates",
+      "zone": "S",
+      "areas": "Battersea",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": "Simply Pilates London offers private and small group sessions. They recommend at least 2 sessions per week for optimal results.",
+      "website": "https://www.simplypilateslondon.com/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Zed Pilates Studio",
+      "zone": "C",
+      "areas": "King's Cross",
+      "types": [
+        "Classical"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://www.zedpilatesstudio.com/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Sana Pilates",
+      "zone": "N",
+      "areas": "Islington",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": "3 for £45",
+      "packages": "Refer to pricing page for pack pricing and/or membership",
+      "website": "https://sanapilates.co.uk/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "The GARNET Studio",
+      "zone": "E",
+      "areas": "Canning Town",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://garnetstudio.co.uk/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Enmei Studios",
+      "zone": "W",
+      "areas": "Chelsea, Marylebone",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": "View Our Packages",
+      "website": "https://enmeistudios.com/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Studio Fix",
+      "zone": "W",
+      "areas": "Kensington High Street",
+      "types": [
+        "Mat",
+        "Yoga",
+        "Barre",
+        "Lagree",
+        "Boxing",
+        "HIIT",
+        "Strength"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": "3 for £50",
+      "packages": "View Memberships: We have memberships and packages to suit all.",
+      "website": "https://studiofix.co.uk/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "Sunday Sporting Club",
+      "zone": "C",
+      "areas": "Marylebone",
+      "types": [
+        "Reformer",
+        "Mat",
+        "Tower"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": "New class packs and memberships available via the app.",
+      "website": "https://sundaysportingclub.com/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
+    },
+    {
+      "name": "The Pilates Sphere",
+      "zone": "SW",
+      "areas": "Richmond",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://thepilatessphere.com/",
+      "lastVerified": "2026-05-01",
+      "candidate": true
     }
   ],
-  "generatedAt": "2026-04-27"
+  "generatedAt": "2026-05-01"
 }
