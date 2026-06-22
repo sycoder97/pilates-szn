@@ -1,11 +1,11 @@
 {
-  "ranAt": "2026-06-15T14:03:09.401Z",
+  "ranAt": "2026-06-22T13:43:28.586Z",
   "results": [
     {
       "studio": "Heartcore",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not directly visible in the HTML. The page links to a 'Pricing' page and mentions booking classes, which likely contain pricing details, but these are not rendered here.",
+      "confidence": 0.9,
+      "notes": "Pricing found on Heartcore's Mindbody booking pages for London locations. The intro offer '3 for £45' is specifically for Hot Mat classes. Drop-in prices are £25 for Hot Mat classes and £35 for Coreformer classes, neither of which matches the requested £30. Package prices found (e.g., 5 Coreformer classes for £165, 10 Coreformer classes for £300) do not match the specific format requested for packages.",
       "changed": false,
       "before": {
         "intro": "3 for £45",
@@ -18,24 +18,14 @@
     },
     {
       "studio": "Ten Health & Fitness",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing for packages and drop-in classes is not explicitly listed on this page; it appears to be behind booking or membership details not fully rendered in the HTML.",
-      "changed": true,
-      "before": {
-        "intro": "YOUR FIRST 3 REFORMER PILATES CLASSES FOR JUST £57",
-        "packages": "Single £38 · Membership from £345/mo"
-      },
-      "after": {
-        "intro": "3 classes for £57",
-        "packages": "Single £38 · Membership from £345/mo"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "FRAME",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing details are not explicitly listed for drop-in or packages on this page. The intro offer is prominent. Further details might be behind booking links or on separate pricing pages.",
+      "notes": "Pricing for classes is not explicitly listed on this page. The intro offer is visible, but package and drop-in prices are not. The website links to a booking system or pricing page for more details.",
       "changed": false,
       "before": {
         "intro": "3 for £40",
@@ -48,24 +38,14 @@
     },
     {
       "studio": "1Rebel",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Intro offer from The Fit Guide and Chloe Hamard blog. Drop-in and 5/10 session packages from 1Rebel's 'Buy Class Sessions' page. Unlimited monthly membership from The Fit Guide.",
-      "changed": true,
-      "before": {
-        "intro": "3 for £49",
-        "packages": "Drop-in £26 · 3 for £75 · 5 for £120 · 10 for £220 · Unlimited £229/mo (6-month commitment)"
-      },
-      "after": {
-        "intro": "3 for £49",
-        "packages": "Drop-in £26 · 5 for £120 · 10 for £220 · Unlimited £249/mo (6-month contract)"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "LevelOut",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing is linked to Healcode widgets for each studio, not directly visible on the homepage.",
+      "notes": "Pricing is linked to Healcode widgets for each studio location, not directly visible on the page.",
       "changed": false,
       "before": {
         "intro": "3 for £30",
@@ -84,18 +64,18 @@
       "changed": true,
       "before": {
         "intro": "1ST 3 CLASSES SE17 STUDIO 2 £36.00",
-        "packages": "30 CLASSES VALID 13 WEEKS ONLY £15.50 PER CLASS"
+        "packages": "30 CLASSES VALID 13 WEEKS ONLY £15.50 PER CLASS TEMPO PILATES & SIGNATURE"
       },
       "after": {
-        "intro": "1ST 3 CLASSES SE17 STUDIO 2 £36.00",
-        "packages": "30 CLASSES VALID 13 WEEKS ONLY £15.50 PER CLASS TEMPO PILATES & SIGNATURE"
+        "intro": "1ST 3 CLASSES\nSE17 STUDIO 2\n£36.00",
+        "packages": "30 CLASSES VALID 13 WEEKS\nONLY £15.50 PER CLASS\nTEMPO PILATES & SIGNATURE"
       }
     },
     {
       "studio": "Psycle",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for classes is not directly visible on the homepage; it is likely behind the booking widget or on specific class/package pages.",
+      "notes": "Pricing for classes is not directly visible on the homepage; it is likely behind the booking or purchase links.",
       "changed": false,
       "before": {
         "intro": "3 classes for £50",
@@ -110,7 +90,7 @@
       "studio": "Reformcore",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for packages and drop-in classes is not explicitly listed on this page. The intro offers are part of a multi-studio pass.",
+      "notes": "Pricing for packages and drop-in classes is not explicitly listed on this page. The intro offers are for a cross-brand membership.",
       "changed": false,
       "before": {
         "intro": "3 Classes for £49",
@@ -124,12 +104,12 @@
     {
       "studio": "KARVE Club",
       "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing found on KARVE Club's Momence booking platform (karve.club/buy and momence.com/KARVE) and corroborated by The Fit Guide.",
-      "changed": true,
+      "confidence": 0.9,
+      "notes": "Pricing obtained from KARVE Club's official website via Momence booking widgets for Kensington, Chelsea, and Victoria studios. The 'KARVE Intro 3 Pack' is £80 and expires in 21 days. Class packs have varying expiry dates (e.g., 5 pack: 42 days, 10 pack: 3 months). Monthly memberships require a minimum 3-month commitment. The website copyright is 2026, indicating current information.",
+      "changed": false,
       "before": {
         "intro": "3 for £80",
-        "packages": "Drop-in £36 · 5 Class Pack £170 · 10 Class Pack £320 · 4 Classes/month £135 · 8 Classes/month £260 · 12 Classes/month £320 · Unlimited £400/mo"
+        "packages": "Drop-in £36 · 5 for £170 · 10 for £320 · Unlimited £400/mo"
       },
       "after": {
         "intro": "3 for £80",
@@ -139,11 +119,11 @@
     {
       "studio": "triyoga",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing details are not explicitly listed for drop-in or packages on this page. The intro offer is for a bundle of classes across multiple studios.",
-      "changed": true,
+      "confidence": 0.9,
+      "notes": "Pricing details are not explicitly listed for drop-in or packages on this page. The intro offer is visible on a slider. Navigation suggests pricing is available via a '/pricing' link.",
+      "changed": false,
       "before": {
-        "intro": "3 for £49",
+        "intro": "3 classes for £49",
         "packages": "£280 per month"
       },
       "after": {
@@ -155,7 +135,7 @@
       "studio": "Nobu Pilates",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing found on Mindbody, The Fit Guide, Country and Town House, Women's Health (February 2025), and Velloy (2024). No specific '3 for £45' intro offer or 'Unlimited £220/mo' package was found, though monthly subscriptions were mentioned as coming in 2025.",
+      "notes": "Pricing information is not directly visible on the page. The page directs users to the Mindbody app or a booking link for class schedules and packages.",
       "changed": false,
       "before": {
         "intro": "Taster from £35",
@@ -172,99 +152,69 @@
     },
     {
       "studio": "Core Flex Pilates",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing is not directly visible in the HTML. Navigation links suggest pricing might be under 'Buy' or 'Shop'.",
-      "changed": false,
-      "before": {
-        "intro": "3 Group Classes £75",
-        "packages": "Drop-in £44 · 5 Classes £185 · 10 Classes £350 · 4 Class Membership £130/mo · 8 Class Membership £250/mo · 12 Class Membership £350/mo"
-      },
-      "after": {
-        "intro": "3 Group Classes £75",
-        "packages": "Drop-in £44 · 5 Classes £185 · 10 Classes £350 · 4 Class Membership £130/mo · 8 Class Membership £250/mo · 12 Class Membership £350/mo"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Avalon Pilates",
       "status": "ok",
       "confidence": 1,
-      "notes": "Pricing from Avalon Pilates website (avalonpilates.com), copyright 2020-2025.",
+      "notes": "Pricing information gathered from avalonpilates.com and confirmed by recent ClassPass listings.",
       "changed": true,
       "before": {
-        "intro": "4 classes for £60",
-        "packages": "Drop-in £35"
+        "intro": "4 for £60",
+        "packages": "Drop-in £35 · 4 for £120 · 8 for £232 · 12 for £336 · 20 for £500 · 40 for £920 · 10 classes/month for £225"
       },
       "after": {
         "intro": "4 for £60",
-        "packages": "Drop-in £35 · 4 for £120 · 8 for £232 · 12 for £336 · 20 for £500 · 40 for £920 · 10 classes/month for £225"
+        "packages": "4 for £120 · 8 for £232 · 12 for £336 · 20 for £500 · 40 for £920 · 10 classes/month £225"
       }
     },
     {
       "studio": "Studio Anatomy",
       "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing obtained directly from Studio Anatomy's website (studioanatomy.co.uk) under the 'Buy' section (Welcome Offer, Class Packs, Memberships).",
+      "confidence": 0.9,
+      "notes": "Pricing found directly on Studio Anatomy's Momence booking platform for London Fields.",
       "changed": true,
       "before": {
-        "intro": "3 for £55",
-        "packages": "Drop-in £17 (additional class for members) · 10 sessions/month: £170 · 10-pack (Islington promo): £140 · 20-pack (Islington promo): £296"
-      },
-      "after": {
         "intro": "3 for £45",
         "packages": "Drop-in £30 · 5 for £140 · 10 for £250 · Unlimited £220/mo"
+      },
+      "after": {
+        "intro": "3 for £55",
+        "packages": "Drop-in £28 · 10 sessions/month for £170 · 16 sessions/month for £256"
       }
     },
     {
       "studio": "Blok",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for class packs and memberships is visible on the page, but specific drop-in rates are not immediately apparent.",
+      "notes": "Prices are shown per location (Clapton is detailed). 'SuperCharge90' is £95 for the first month. Class packs start from £22, memberships from £83/mo.",
       "changed": true,
       "before": {
         "intro": "10 for £75 (first month)",
-        "packages": "£22 · Memberships from £83/mo"
+        "packages": "Class Packs from £22 · Memberships from £83/per month"
       },
       "after": {
         "intro": "10 for £75 (first month)",
-        "packages": "Class Packs from £22 · Memberships from £83/per month"
+        "packages": "£95 · Class Packs from £22 · Memberships from £83/mo"
       }
     },
     {
       "studio": "Blanc Space",
-      "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not directly visible on this page. It is likely behind a booking or membership portal.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £55",
-        "packages": "Memberships & Packs"
-      },
-      "after": {
-        "intro": "3 for £55",
-        "packages": "Memberships & Packs"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "PBB Studio",
-      "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not directly visible on the homepage. The 'Book a Class' link leads to a page that likely contains pricing, but it's not inline on this HTML.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £60",
-        "packages": "5 for £115 · £25 single"
-      },
-      "after": {
-        "intro": "3 for £60",
-        "packages": "5 for £115 · £25 single"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Bootcamp Pilates",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing information is not directly visible on this page. It appears to be handled by an embedded Glofox widget or linked externally.",
+      "notes": "Pricing information is not directly visible on this page. The page links to a '/pricing' page and embeds a Glofox booking widget, suggesting pricing is managed through their booking system.",
       "changed": false,
       "before": {
         "intro": "3 for £55",
@@ -277,42 +227,21 @@
     },
     {
       "studio": "Flowing Body",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing is primarily for intro offers and private sessions. Group class pricing is not explicitly listed but linked to booking via Momence.",
-      "changed": false,
-      "before": {
-        "intro": "First 3 classes for £49",
-        "packages": "Class packs from ~£20/class"
-      },
-      "after": {
-        "intro": "First 3 classes for £49",
-        "packages": "Class packs from ~£20/class"
-      }
+      "status": "fetch-failed"
     },
     {
       "studio": "Flow Ldn",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing for packages and drop-in classes is not explicitly listed on this page. The 'buy pack here' button links to a pricing page, and the 'book classes' button links to a timetable, suggesting pricing is managed through their booking system.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £40",
-        "packages": "Packs from ~£18/class"
-      },
-      "after": {
-        "intro": "3 for £40",
-        "packages": "Packs from ~£18/class"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "East of Eden",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for drop-in and packages not explicitly listed on this page. Intro offers are detailed.",
-      "changed": true,
+      "notes": "Pricing details for drop-in or class packs are not explicitly listed on this page. The intro offers are clearly visible.",
+      "changed": false,
       "before": {
-        "intro": "Strength Intro: Up to 4 classes at Hoe Street for £30 · Both Studios Intro: 50 credits across all classes for £50",
+        "intro": "Up to 4 classes at Hoe Street for £30 · 50 credits across all classes for £50",
         "packages": "£14 single · Packs from £12/class"
       },
       "after": {
@@ -324,10 +253,10 @@
       "studio": "First Reform",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing is linked to a booking widget (Momence) and specific package details are not directly visible in the HTML.",
-      "changed": true,
+      "notes": "Pricing for classes and packages is not directly visible in this HTML and is likely behind the booking widget.",
+      "changed": false,
       "before": {
-        "intro": "Take your first class with us for £12 + 25% off all first packs purchased code: FIRSTPACK",
+        "intro": "Take your first class with us for £12",
         "packages": "£24/session, pack discounts"
       },
       "after": {
@@ -337,39 +266,19 @@
     },
     {
       "studio": "Pilates HQ",
-      "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing found on Pilates HQ's official website (pilateshq.co.uk) and its Mindbody booking platform. The studio offers a 'First class FREE' as an introductory offer. Drop-in prices vary by peak (£25) and off-peak (£22) hours. Package prices listed are for peak hours. No 'Unlimited £220/mo' package was found for the London studio.",
-      "changed": true,
-      "before": {
-        "intro": "3 for £39",
-        "packages": "Drop-in £25 · 5 for £100-£120 · 10 for £180-£200"
-      },
-      "after": {
-        "intro": "3 for £39",
-        "packages": "Drop-in £25 · 5 for £120 · 10 for £200"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Core Pilates Studios",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing for classes and packages is not directly listed on this page; users are directed to book via Momence or specific studio pages which may contain pricing details.",
-      "changed": false,
-      "before": {
-        "intro": "2 Classes for £35",
-        "packages": "Group & private from £40"
-      },
-      "after": {
-        "intro": "2 Classes for £35",
-        "packages": "Group & private from £40"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Club Pilates",
       "status": "ok",
       "confidence": 0.8,
-      "notes": "Pricing details are not explicitly listed on the homepage. The 'First Class Free' offer is prominent, but other pricing requires visiting a specific studio or booking.",
+      "notes": "Pricing details are not explicitly listed on the homepage. The 'First Class Free' offer is prominent, but other pricing requires further investigation, likely through a studio locator or booking system.",
       "changed": false,
       "before": {
         "intro": "First Class Free",
@@ -383,8 +292,8 @@
     {
       "studio": "FÔLD Reformer",
       "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing for FÔLD HQ Studio (Studio 217, Buspace Studios, Conlan Street, London, W10 5AP) based on a recent article (December 2025) on foldreformer.com mentioning 'pay as you go classes from just £10' and 'book your first class for free'. No explicit packages found for their own studio.",
+      "confidence": 0,
+      "notes": "This page is for a product (reformer machine), not a studio offering classes. Pricing for classes is not available.",
       "changed": false,
       "before": {
         "intro": "First class free",
@@ -402,38 +311,28 @@
     {
       "studio": "Casa Core",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not directly visible in the HTML. The 'PRICES' link in the navigation suggests pricing is available elsewhere on the site, likely behind a booking system or on a separate page.",
-      "changed": false,
+      "confidence": 1,
+      "notes": "Pricing found on casacore.uk (Prices page and Momence booking links). Intro offer. Reformer 5 and 10 class packs, and Fusion Pro monthly membership (£220/mo for 12 classes) found on casacore.uk. Website copyright 2025, with recent reviews from June 2026 and Feb 2026.",
+      "changed": true,
       "before": {
         "intro": "3 for £55",
         "packages": "Drop-in £30 · 5 for £140 · 10 for £226"
       },
       "after": {
         "intro": "3 for £55",
-        "packages": "Drop-in £30 · 5 for £140 · 10 for £226"
+        "packages": "5 for £140 · 10 for £260 · Unlimited £220/mo"
       }
     },
     {
       "studio": "Scandi Pilates",
-      "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not explicitly listed on the homepage. The site focuses on online classes and personal training. A link to 'Pricing Packages' is available in the navigation, but the content of that page is not provided.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £50",
-        "packages": "Packs from ~£22/class"
-      },
-      "after": {
-        "intro": "3 for £50",
-        "packages": "Packs from ~£22/class"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "FS8",
       "status": "ok",
-      "confidence": 0.5,
-      "notes": "Pricing information is not directly visible on the page. It is likely behind a booking widget or requires selecting a specific studio.",
+      "confidence": 0.8,
+      "notes": "Pricing information is not directly visible on this page. It is likely behind a booking or membership portal.",
       "changed": false,
       "before": {
         "intro": "Trial class £20",
@@ -448,7 +347,7 @@
       "studio": "Hypecore",
       "status": "ok",
       "confidence": 0.1,
-      "notes": "Pricing information is not directly visible in the HTML. The page links to booking/schedule pages and mentions 'clear pricing' but does not display specific prices.",
+      "notes": "Pricing is not visible on the page. The page links to a booking widget.",
       "changed": false,
       "before": {
         "intro": "3 for £59",
@@ -462,98 +361,48 @@
     {
       "studio": "Reformer LDN",
       "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing is linked to external booking platform (Momence) and not directly visible in HTML.",
+      "confidence": 0.9,
+      "notes": "Pricing is linked to the Momence booking platform.",
       "changed": true,
       "before": {
-        "intro": "4 Classes + Free Grip Socks",
+        "intro": "4 for £48",
         "packages": "Packs from ~£20/class"
       },
       "after": {
-        "intro": "4 for £48",
+        "intro": "Four classes for £48",
         "packages": "Packs from ~£20/class"
       }
     },
     {
       "studio": "LOAD",
-      "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing is not explicitly listed for drop-in or packages. The intro offer is prominent. Other offers are likely behind the 'buy sessions' or 'my account' links which lead to external booking platforms.",
-      "changed": false,
-      "before": {
-        "intro": "1 session £15 or 2 weeks unlimited pack for £100",
-        "packages": "Packs from ~£25/class"
-      },
-      "after": {
-        "intro": "1 session £15 or 2 weeks unlimited pack for £100",
-        "packages": "Packs from ~£25/class"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Truform",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing information is not directly visible on the page. The 'BOOK NOW' button links to a booking system.",
-      "changed": false,
-      "before": {
-        "intro": "2 for £30",
-        "packages": "Drop-in £26 · 5 for £125 · 10 for £235 · 20 for £400 · 40 for £720"
-      },
-      "after": {
-        "intro": "2 for £30",
-        "packages": "Drop-in £26 · 5 for £125 · 10 for £235 · 20 for £400 · 40 for £720"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "MAD Lagree",
-      "status": "ok",
-      "confidence": 0.2,
-      "notes": "Pricing is not directly visible in the HTML. Links to booking platforms are present but do not display prices inline.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £70",
-        "packages": "Drop-in £35"
-      },
-      "after": {
-        "intro": "3 for £70",
-        "packages": "Drop-in £35"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Oncore",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing details are behind a 'Buy Classes' link and not directly visible on this page.",
-      "changed": false,
-      "before": {
-        "intro": "Try ANY 3 classes and see what you think £39",
-        "packages": "Memberships from £99/mo"
-      },
-      "after": {
-        "intro": "Try ANY 3 classes and see what you think £39",
-        "packages": "Memberships from £99/mo"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Pilates Squared",
-      "status": "ok",
-      "confidence": 0.1,
-      "notes": "Pricing information is not present in the provided HTML. The page appears to be a template or loading screen.",
-      "changed": false,
-      "before": {
-        "intro": "Intro session £75",
-        "packages": "Drop-in £42 · 10 for £360"
-      },
-      "after": {
-        "intro": "Intro session £75",
-        "packages": "Drop-in £42 · 10 for £360"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Kovaa Studio",
       "status": "ok",
-      "confidence": 0.1,
-      "notes": "Pricing information is not directly visible on this page. The 'Memberships & Pricing' link in the navigation suggests pricing is available elsewhere. The 'Book A Class' button likely leads to a booking system where prices might be found.",
+      "confidence": 0.8,
+      "notes": "Pricing information is not directly visible on this page. The page links to 'Memberships & Pricing' and 'Schedule' which likely contain pricing details.",
       "changed": false,
       "before": {
         "intro": "Intro pack from £30",
@@ -566,24 +415,14 @@
     },
     {
       "studio": "Plum Pilates",
-      "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing is not explicitly listed on this page. The navigation links to 'Pricing' and 'Timetable', which likely contain the pricing information, but it's not directly visible in the provided HTML.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £45",
-        "packages": "PLUM 5: £100 · PLUM 10: £180 · PLUM 16: £262"
-      },
-      "after": {
-        "intro": "3 for £45",
-        "packages": "PLUM 5: £100 · PLUM 10: £180 · PLUM 16: £262"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "House of Balance",
       "status": "ok",
       "confidence": 0.9,
-      "notes": null,
+      "notes": "Pricing is advertised as an intro offer, but no other group class or package pricing is visible.",
       "changed": false,
       "before": {
         "intro": "2 sessions for £35",
@@ -597,38 +436,38 @@
     {
       "studio": "Exhale Pilates",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing is not directly visible on this page. Links to 'Pricing' and 'Intro Offers' are present, but the actual prices are not displayed inline. The page mentions 'Intro Offers' and links to them, but no specific offer details are shown.",
-      "changed": false,
+      "confidence": 0.9,
+      "notes": "Official website T&Cs (May 2026) and Time Out review (Feb 2026).",
+      "changed": true,
       "before": {
         "intro": "New to Exhale? Get started with one of our Intro Offers here",
         "packages": "Drop-in £40 · 10 for cheaper"
       },
       "after": {
         "intro": "New to Exhale? Get started with one of our Intro Offers here",
-        "packages": "Drop-in £40 · 10 for cheaper"
+        "packages": "Drop-in £40 · 5 classes/month £150 · 10 classes/month £275"
       }
     },
     {
       "studio": "Kinetic Pilates",
       "status": "ok",
-      "confidence": 0.1,
-      "notes": "Pricing information is not visible on this page. The page focuses on the studio's philosophy and testimonials.",
-      "changed": false,
+      "confidence": 0.9,
+      "notes": "Pricing for Group Equipment Classes at Kinetic Pilates City (Old Street) from kineticpilates.com and Mindbody. Kinetic Pilates North (Stroud Green) has slightly different pricing for some packages and drop-ins.",
+      "changed": true,
       "before": {
         "intro": "3 Group Classes for £75",
         "packages": "10 for £250"
       },
       "after": {
-        "intro": "3 Group Classes for £75",
-        "packages": "10 for £250"
+        "intro": "3 for £75",
+        "packages": "Drop-in £40 · 5 for £190 · 10 for £360"
       }
     },
     {
       "studio": "Curve Pilates",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for packages and drop-in classes not explicitly listed on the page. The intro offer is a button linking to booking.",
+      "notes": "Pricing details are not explicitly listed for drop-in or packages. The intro offer is prominently displayed.",
       "changed": false,
       "before": {
         "intro": "3 for £55",
@@ -641,24 +480,14 @@
     },
     {
       "studio": "Reform & Vibes",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing is behind a booking widget (bsport.io).",
-      "changed": true,
-      "before": {
-        "intro": "3 for £49",
-        "packages": "Unlimited Pilates Pass £88"
-      },
-      "after": {
-        "intro": "3 CLASSES FOR £49",
-        "packages": "Unlimited Pilates Pass £88"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Strong & Bendy",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing details are primarily found on linked pages like 'new-customer-offer' and 'reformer-pilates-prices'.",
+      "notes": "Pricing details are primarily found via links to external booking/purchase pages.",
       "changed": false,
       "before": {
         "intro": "3 classes JUST £45",
@@ -672,53 +501,33 @@
     {
       "studio": "Respark",
       "status": "ok",
-      "confidence": 0.1,
-      "notes": "Pricing information is not directly visible in the HTML. It appears to be loaded via external widgets (bsport-widget-intro, bsport-widget-membership, bsport-widget-packages).",
-      "changed": false,
+      "confidence": 0.6,
+      "notes": "The '6 Reformer Pilates Classes for £79' was found on the Respark Clinic's 'Products' page (theresparkclinic.com/collections/all-products). No explicit '3 for £45' introductory offer, drop-in price, or monthly membership prices were found directly on the studio's website or through associated platforms like ClassPass or Wellhub for Pilates specifically.",
+      "changed": true,
       "before": {
         "intro": "3 for £57",
         "packages": "From £30/class in pack"
       },
       "after": {
         "intro": "3 for £57",
-        "packages": "From £30/class in pack"
+        "packages": "6 Reformer Pilates Classes for £79"
       }
     },
     {
       "studio": "Freedom Clinics",
-      "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not directly visible in the HTML. The page focuses on the benefits and types of clinical pilates. There are links to book sessions and a ticker with a patient-exclusive offer, but no clear pricing for general drop-in or packages.",
-      "changed": false,
-      "before": {
-        "intro": "Intro class from £30",
-        "packages": "Groups of 6 · Packs available"
-      },
-      "after": {
-        "intro": "Intro class from £30",
-        "packages": "Groups of 6 · Packs available"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Milo & The Bull",
-      "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing is not visible on this page. The page appears to be a landing page with a link to 'Continue to website' and a 'Book Now' button, suggesting pricing is likely behind a booking system.",
-      "changed": false,
-      "before": {
-        "intro": "2 for £25",
-        "packages": "Drop-in £28 · 5 for £130 · 10 for £220"
-      },
-      "after": {
-        "intro": "2 for £25",
-        "packages": "Drop-in £28 · 5 for £130 · 10 for £220"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Pause Studio",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing details are not explicitly listed on this page. The intro offer is visible, but other class pack or drop-in prices are not. The site links to 'momence.com' for booking, which may contain pricing.",
+      "notes": "Pricing details are not explicitly listed on this page. The intro offer is prominent, but other class pack or drop-in prices are not visible.",
       "changed": false,
       "before": {
         "intro": "3 Classes for £49",
@@ -732,11 +541,11 @@
     {
       "studio": "Complete Pilates",
       "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing details are not explicitly listed in a clear format. The new client offer is mentioned, but general drop-in or package prices are not visible.",
-      "changed": true,
+      "confidence": 0.9,
+      "notes": "Pricing for group classes is not explicitly listed, but the new client offer is prominent. The site links to booking widgets for specific class types.",
+      "changed": false,
       "before": {
-        "intro": "2 for £156",
+        "intro": "two 55-minute 1:1 sessions for £156",
         "packages": "5 for £125 · 10 for £200"
       },
       "after": {
@@ -746,39 +555,19 @@
     },
     {
       "studio": "Strong Pilates",
-      "status": "ok",
-      "confidence": 1,
-      "notes": "Pricing primarily from strongpilates.co.uk/location/wimbledon/ and intro offer confirmed on Islington and Wandsworth location pages.",
-      "changed": true,
-      "before": {
-        "intro": "7 classes for £49",
-        "packages": "Drop-in £30 · 5 for £119 · 10 for £219"
-      },
-      "after": {
-        "intro": "7 classes for £49",
-        "packages": "Drop-in £30 · 5 Class Pack £145 · 10 Class Pack £269 · Unlimited (no commitment) £259/mo"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "BST Lagree",
-      "status": "ok",
-      "confidence": 0.8,
-      "notes": "Pricing information is not directly visible in the HTML. The site links to a 'Book' page which likely contains pricing details.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £59",
-        "packages": "Single £35 · Packs via Mariana Tek"
-      },
-      "after": {
-        "intro": "3 for £59",
-        "packages": "Single £35 · Packs via Mariana Tek"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "FORM Studios",
       "status": "ok",
-      "confidence": 0.3,
-      "notes": "Pricing is not directly visible on the page. Booking links lead to Mindbody widgets which do not display prices inline.",
+      "confidence": 0.8,
+      "notes": "Pricing is not directly visible on this page. Booking links lead to Mindbody widgets.",
       "changed": false,
       "before": {
         "intro": "Lagree 3 for £70",
@@ -793,7 +582,7 @@
       "studio": "Barrecore",
       "status": "ok",
       "confidence": 0.9,
-      "notes": "Pricing for the 'Common Bond Intro Pass' is visible. The main package pricing is for a monthly membership.",
+      "notes": "Pricing for 'Common Bond Intro Pass' mentioned, but not for individual Barrecore classes. Membership pricing is listed.",
       "changed": false,
       "before": {
         "intro": "3 Classes for £49",
@@ -806,48 +595,18 @@
     },
     {
       "studio": "Refine Pilates",
-      "status": "ok",
-      "confidence": 0.1,
-      "notes": "Pricing information is not directly visible in the HTML. The navigation links to 'Pricing' but the content does not display prices.",
-      "changed": false,
-      "before": {
-        "intro": "3 for £45",
-        "packages": "Drop-in £30 · 4 Classes £110 · 6 Classes £165 · 10 Classes £200 · 4 Sessions/month £100 · 6 Sessions/month £150 · 8 Sessions/month £180 · Unlimited/month £200"
-      },
-      "after": {
-        "intro": "3 for £45",
-        "packages": "Drop-in £30 · 4 Classes £110 · 6 Classes £165 · 10 Classes £200 · 4 Sessions/month £100 · 6 Sessions/month £150 · 8 Sessions/month £180 · Unlimited/month £200"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Restart Reformer",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing details are not explicitly listed for drop-in or packages, but an intro offer is prominent.",
-      "changed": true,
-      "before": {
-        "intro": "£45 for 3 classes",
-        "packages": "Single £30 · 5 for £115 · 10 for £210"
-      },
-      "after": {
-        "intro": "£45 FOR 3 CLASSES",
-        "packages": "Single £30 · 5 for £115 · 10 for £210"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     },
     {
       "studio": "Chapel Studio Pilates",
-      "status": "ok",
-      "confidence": 0.9,
-      "notes": "Pricing for drop-in classes is not explicitly stated. Introduction offer is for 5 classes over 2 weeks.",
-      "changed": true,
-      "before": {
-        "intro": "5 Classes 2 weeks £45",
-        "packages": "5 Class Block £95 · 10 Class Block £150"
-      },
-      "after": {
-        "intro": "£45",
-        "packages": "5 for £95 · 10 for £150"
-      }
+      "status": "extract-failed",
+      "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
     }
   ]
 }
