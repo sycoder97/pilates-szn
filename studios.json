@@ -878,7 +878,135 @@
       "website": "https://www.chapelstudiopilates.co.uk",
       "lastVerified": "2026-06-15",
       "image": "https://cdn.prod.website-files.com/688a18c9d5f0ac4389a047b9/68caead3a0b9a9bec2543d44_CS%20Open%20Graph.jpg"
+    },
+    {
+      "name": "The GARNET Studio",
+      "zone": "E",
+      "areas": "Canning Town",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://www.garnetstudio.co.uk/",
+      "lastVerified": "2026-07-01",
+      "candidate": true
+    },
+    {
+      "name": "BR Reformer Studios",
+      "zone": "E",
+      "areas": "Dagenham",
+      "types": [
+        "Reformer",
+        "Cadillac"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://brreformerstudios.com/",
+      "lastVerified": "2026-07-01",
+      "candidate": true
+    },
+    {
+      "name": "Nouva",
+      "zone": "W",
+      "areas": "Chelsea",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://nouvapilates.com/",
+      "lastVerified": "2026-07-01",
+      "candidate": true
+    },
+    {
+      "name": "Sol House",
+      "zone": "C",
+      "areas": "Central London",
+      "types": [
+        "Classical"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://solhouse.co.uk/",
+      "lastVerified": "2026-07-01",
+      "candidate": true
+    },
+    {
+      "name": "Flow Reformer Pilates",
+      "zone": "C",
+      "areas": "City of London (Monument)",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://flowreformerpilates.com/",
+      "lastVerified": "2026-07-01",
+      "candidate": true
+    },
+    {
+      "name": "Enmei",
+      "zone": "W",
+      "areas": "Fulham Road",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://enmei.co.uk/",
+      "lastVerified": "2026-07-01",
+      "candidate": true
+    },
+    {
+      "name": "Studio Fix",
+      "zone": "W",
+      "areas": "High Street Kensington",
+      "types": [
+        "Mat",
+        "Yoga",
+        "Barre",
+        "Lagree",
+        "Boxing",
+        "HIIT",
+        "Strength"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": "3 for £50",
+      "packages": "View Memberships: We have memberships and packages to suit all.",
+      "website": "https://studiofix.co.uk/",
+      "lastVerified": "2026-07-01",
+      "candidate": true
+    },
+    {
+      "name": "Sunday Sporting Club",
+      "zone": "C",
+      "areas": "Marylebone",
+      "types": [
+        "Reformer",
+        "Mat"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": "New class packs and memberships available in the app.",
+      "website": "https://sundaysportingclub.com/",
+      "lastVerified": "2026-07-01",
+      "candidate": true
     }
   ],
-  "generatedAt": "2026-06-29"
+  "generatedAt": "2026-07-01"
 }
