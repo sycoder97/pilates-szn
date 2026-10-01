@@ -878,7 +878,183 @@
       "website": "https://www.chapelstudiopilates.co.uk",
       "lastVerified": "2026-06-15",
       "image": "https://cdn.prod.website-files.com/688a18c9d5f0ac4389a047b9/68caead3a0b9a9bec2543d44_CS%20Open%20Graph.jpg"
+    },
+    {
+      "name": "Aligné Studio",
+      "zone": "C",
+      "areas": "Great Portland Street",
+      "types": [
+        "Reformer",
+        "Tower",
+        "Mat"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://alignestudio.com/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Pi Studios",
+      "zone": "S",
+      "areas": "Battersea",
+      "types": [
+        "Classical",
+        "Reformer",
+        "Tower",
+        "Wunda Chair",
+        "Mat"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://pistudios.co.uk/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Sol House",
+      "zone": "C",
+      "areas": "Central London",
+      "types": [
+        "Classical",
+        "Contemporary"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://solhouse.co.uk/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "BR Reformer Studios",
+      "zone": "E",
+      "areas": "Dagenham",
+      "types": [
+        "Reformer",
+        "Cadillac"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": "2 classes £32",
+      "packages": "Drop-in £21 · 5 Class Pack Reformer £95, 10 Class Pack Reformer £195, 15 Class Pack Reformer £285, 5 Class Pack Any Class £115, 10 Class Pack Any Class £220, 15 Class Pack Any Class £315",
+      "website": "https://brreformerstudios.com/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Reform & Rise Pilates",
+      "zone": "E",
+      "areas": "Bow",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://reformandrisepilates.com/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Nouva Pilates",
+      "zone": "W",
+      "areas": "Chelsea",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://nouvapilates.com/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Elevate Pilates London",
+      "zone": "N",
+      "areas": "St John's Wood",
+      "types": [
+        "Classical",
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://elevatepilateslondon.com/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Sloane Space",
+      "zone": "S",
+      "areas": "London Bridge",
+      "types": [
+        "Lagree"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": "Class packs from £160, Membership from £120/mo",
+      "website": "https://www.sloanespace.com/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Enmei",
+      "zone": "W",
+      "areas": "Fulham Road, Chelsea",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://enmei.co.uk/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Sunday Sporting Club",
+      "zone": "C",
+      "areas": "Marylebone",
+      "types": [
+        "Reformer",
+        "Mat",
+        "Tower"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": "Referral only studio, private sessions available.",
+      "website": "https://sundaysportingclub.com/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
+    },
+    {
+      "name": "Every Pilates",
+      "zone": "S",
+      "areas": "Northcote Road",
+      "types": [
+        "Reformer"
+      ],
+      "lat": null,
+      "lng": null,
+      "intro": null,
+      "packages": null,
+      "website": "https://everypilates.com/",
+      "lastVerified": "2026-10-01",
+      "candidate": true
     }
   ],
-  "generatedAt": "2026-06-29"
+  "generatedAt": "2026-10-01"
 }
